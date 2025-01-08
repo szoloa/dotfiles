@@ -1,0 +1,24 @@
+{
+    "modules-left": ["hyprland/workspaces", "sway/mode"],
+    "modules-center": ["hyprland/window"],
+    "sway/window":{"format":"{title}"},
+    "modules-right": ["cpu", "memory", "pulseaudio", "battery", "clock","tray"],
+    "clock": {
+        "format": "{:%Y-%m-%d %H:%M}"
+    },
+    "cpu": {
+        "format": "CPU: {usage}%"
+    },
+    "memory": {
+        "format": "Mem: {}%"
+    },
+    "network": {
+        "format": "{ifname} {ipaddr} {downspeed}↓ {upspeed}↑"
+    },
+    "battery": {
+        "format": "Bat: {capacity}% {status}"
+    },
+    "pulseaudio": {
+        "format": "Volume: {volume}%"
+    }
+}
