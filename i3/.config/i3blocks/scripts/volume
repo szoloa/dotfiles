@@ -1,0 +1,5 @@
+#!/bin/bash
+volume=$(wpctl get-volume @DEFAULT_SINK@ | awk '{print $2*100}')
+mute=$(wpctl get-volume @DEFAULT_SINK@ | awk '{print $3}')
+
+echo Vol $volume% $mute
