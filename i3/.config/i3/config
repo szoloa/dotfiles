@@ -181,7 +181,8 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+t exec ~/.config/scipts/notice.sh
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-bindsym $mod+Shift+p exec kitty countdown 5m
+bindsym $mod+Shift+p exec kitty --app-id=kitty-full countdown 5m 
+for_window [class="kitty-full"] fullscreen enable
 
 mode "resize" {
         bindsym j resize shrink width 50 px or 50 ppt
