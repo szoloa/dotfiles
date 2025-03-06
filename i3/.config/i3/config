@@ -1,13 +1,52 @@
 set $mod Mod1
 
-font pango:Dejavu Sans Mono 11
+font pango:JetBrainsMono Nerd Font 11
 
-gaps inner 1
-gaps outer 1
+gaps inner 5
+gaps outer 5
 
 default_border pixel 2
 
+set $rosewater #f4dbd6
+set $flamingo #f0c6c6
+set $pink #f5bde6
+set $mauve #c6a0f6
+set $red #ed8796
+set $maroon #ee99a0
+set $peach #f5a97f
+set $yellow #eed49f
+set $green #a6da95
+set $teal #8bd5ca
+set $sky #91d7e3
+set $sapphire #7dc4e4
+set $blue #8aadf4
+set $lavender #b7bdf8
+set $text #cad3f5
+set $subtext1 #b8c0e0
+set $subtext0 #a5adcb
+set $overlay2 #939ab7
+set $overlay1 #8087a2
+set $overlay0 #6e738d
+set $surface2 #5b6078
+set $surface1 #494d64
+set $surface0 #363a4f
+set $base #24273a
+set $mantle #1e2030
+set $crust #181926
+
+# new_window pixel 5
+# new_float  pixel 5
+
+# target                 title     bg    text   indicator  border
+client.focused           $lavender $base $text  $rosewater $lavender
+client.focused_inactive  $overlay0 $base $text  $rosewater $overlay0
+client.unfocused         $overlay0 $base $text  $rosewater $overlay0
+client.urgent            $peach    $base $peach $overlay0  $peach
+client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
+client.background        $base
+
 exec --no-startup-id dex --autostart --environment i3
+exec --no-startup-id xset s off
 # exec --no-startup-id copyq
 exec --no-startup-id dunst
 exec --no-startup-id fcitx5
@@ -15,14 +54,14 @@ exec --no-startup-id picom
 exec --no-startup-id mpd
 # exec --no-startup-id blueman-applet
 # exec --no-startup-id nm-applet
-exec --no-startup-id pasystray
-exec --no-startup-id xrandr --output HDMI-0 --rate 75.00 --mode 2560x1440
-exec --no-startup-id lxqt-policykit-agent
+# exec --no-startup-id pasystray
+# exec --no-startup-id xrandr --output HDMI-0 --rate 75.00 --mode 2560x1440
+# exec --no-startup-id lxqt-policykit-agent
 
 exec_always autotiling
-exec_always feh --bg-fill ~/Pictures/Emilia.jpg
+exec_always feh --bg-fill ~/Pictures/dianjuren.png
 
-
+exec_always unclutter -idle 1 -jitter 2 -root &
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status pkill -SIGRTMIN+10 i3blocks
 
@@ -37,11 +76,12 @@ tiling_drag modifier titlebar
 
 # start a terminal
 bindsym $mod+Return exec kitty
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 bindsym $mod+BackSpace kill
+bindsym $mod+Shift+Return exec kitty --app-id=kitty-floating
 
 bindsym $mod+d exec "rofi -modi drun,run -show drun"
-
+bindsym Print exec gnome-screenshot -f ~/Pictures/screenshot/$(date +%s).png
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
@@ -88,7 +128,9 @@ bindsym $mod+c move position center
 
 bindsym $mod+a focus parent
 
-bindsym $mod+p exec playerctl play-pause
+# bindsym $mod+p exec playerctl play-pause
+
+bindsym $mod+p exec mpc toggle
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -119,40 +161,51 @@ bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace number $ws1
-bindsym $mod+Shift+2 move container to workspace number $ws2
-bindsym $mod+Shift+3 move container to workspace number $ws3
-bindsym $mod+Shift+4 move container to workspace number $ws4
-bindsym $mod+Shift+5 move container to workspace number $ws5
-bindsym $mod+Shift+6 move container to workspace number $ws6
-bindsym $mod+Shift+7 move container to workspace number $ws7
-bindsym $mod+Shift+8 move container to workspace number $ws8
-bindsym $mod+Shift+9 move container to workspace number $ws9
-bindsym $mod+Shift+0 move container to workspace number $ws10
+bindsym $mod+Shift+1 move container to workspace number $ws1; workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2; workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3; workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4; workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5; workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6; workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7; workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8; workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9; workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10; workspace number $ws10
 
 
 bindsym $mod+Ctrl+Left workspace prev
 bindsym $mod+Ctrl+Right workspace next
 
-# reload the configuration file
 bindsym $mod+Shift+c reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+t exec ~/.config/scipts/notice.sh
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-# resize window (you can also use the mouse for that)
-mode "resize" {
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+bindsym $mod+Shift+p exec kitty countdown 5m
 
-		bindsym c move position center
+mode "resize" {
+        bindsym j resize shrink width 50 px or 50 ppt
+        bindsym k resize grow height 50 px or 50 ppt
+        bindsym l resize shrink height 50 px or 50 ppt
+        bindsym semicolon resize grow width 50 px or 50 ppt
+        bindsym $mod+j move up 50 px
+	      bindsym $mod+k move left 50 px
+        bindsym $mod+l move right 50 px
+        bindsym $mod+semicolon move down 50 px
+
+        bindsym $mod+c floating enable; resize set 640 480; move position center
+        bindsym f floating enable; resize set 1920 1080; move position center
+        bindsym c move position center
+        bindsym space floating toggle
         bindsym Left resize shrink width 10 px or 10 ppt
         bindsym Down resize grow height 10 px or 10 ppt
         bindsym Up resize shrink height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
+        bindsym $mod+Up move up 10 px
+        bindsym $mod+Left move left 10 px
+        bindsym $mod+Right move right 10 px
+        bindsym $mod+Down move down 10 px
+
         bindsym Return mode "default"
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
@@ -180,25 +233,47 @@ mode "music" {
 		bindsym Enter mode "default"
 }
 
+mode "mpc" {
+		bindsym p exec mpc toggle
+		bindsym space exec mpc toggle
+		bindsym Left exec mpc prev
+		bindsym Right exec mpc next
+		bindsym c exec mpc clear
+		bindsym Up exec mpc seek -5%
+    bindsym Down exec mpc seek +5%
+		bindsym u exec kitty ncmpcpp 
+		bindsym Escape mode "default"
+		bindsym Return mode "default"
+		bindsym $mod+r mode "default"
+		bindsym Ctrl+m mode "default"
+		bindsym Enter mode "default"
+}
+
 bindsym $mod+Ctrl+r mode "raz" 
 
 bindsym $mod+r mode "resize"
 
-bindsym $mod+m mode "music"
+bindsym Ctrl+m mode "music"
+
+bindsym $mod+m mode "mpc"
+
 #===power manager===
-set $mode_system select: lock(L) exit(E) suspend (S) reboot(R) poweroff(O) cancel(Esc)
+set $mode_system select: lock(L) exit(E) suspend(S) reboot(R) poweroff(O) cancel(Esc)
 bindsym mod4+Shift+q mode "$mode_system"
 mode "$mode_system" {
-    bindsym l exec --no-startup-id i3lock -c '#000000', mode "default"
+    bindsym l exec --no-startup-id i3lock -c "#000000" , mode "default"
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
     bindsym s exec --no-startup-id systemctl suspend, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
     bindsym o exec --no-startup-id systemctl poweroff, mode "default"
+	  bindsym p exec xrandr --output HDMI-0 --rate 75.00 --mode 2560x1440
+	  bindsym q exec xrandr --output DP-0 --off
+	  bindsym x exec xrandr --output DP-0 --auto
     bindsym Escape mode "default"
 }
 
 # for_window [class="FlClash"] floating enable
-# for_window [class="QQ"] floating enable
+# for_window [class="QQ"] floating en0able
 # for_window [class="wechat"] floating enable 
 # for_window [class="nomacs"] floating enable
 # for_window [class="Image Lounge"] floating enable
@@ -217,28 +292,25 @@ for_window [class=".*"] floating enable
 for_window [class="kitty"] floating disable
 for_window [class="Zotero"] floating disable
 for_window [class="mpv"] floating disable
-for_window [class="Chromium"] floating disable
+for_window [class="Google-chrome"] floating disable
+for_window [class="kitty-floating"] floating enable resize set 640 480, move position center
+for_window [class="obsidian"] floating disable
 
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
 bar {
 	position top
+	# tray_output none
 	colors {
-        background #000000ee
-        statusline #ffffffee
-        separator #ffffffaa
-		
-        active_workspace   #000000 #666666 #aaaaaa
-        inactive_workspace   #000000 #000000 #aaaaaa
-        focused_workspace #aaaaaa #aaaaaa #111111
-        urgent_workspace   #999999 #999999 #000000
-        binding_mode       #585eaa #9b95c9 #000000
-    }
-		#i3bar_command i3bar --transparency
-        status_command i3blocks 
+     background #151424aa
+     statusline #ffffffee
+     separator #ffffffaa
+
+      active_workspace   #000000 #999999 #666666
+      inactive_workspace   #151424 #151424 #aaaaaa
+      focused_workspace #aaaaaa #aaaaaa #111111
+      urgent_workspace   #aa3300 #aa3300 #111111
+      binding_mode       #585eaa #9b95c9 #000000
+  	}
+	 i3bar_command i3bar --transparency
+  status_command i3blocks 
+	workspace_buttons yes
 }
-
-
-
-
