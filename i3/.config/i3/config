@@ -2,8 +2,8 @@ set $mod Mod1
 
 font pango:JetBrainsMono Nerd Font 11
 
-gaps inner 5
-gaps outer 5
+# gaps inner 5
+# gaps outer 5
 
 default_border pixel 2
 
@@ -78,10 +78,21 @@ tiling_drag modifier titlebar
 bindsym $mod+Return exec kitty
 bindsym $mod+q kill
 bindsym $mod+BackSpace kill
+
+# Create a kiity window with floating and small size.
 bindsym $mod+Shift+Return exec kitty --app-id=kitty-floating
 
 bindsym $mod+d exec "rofi -modi drun,run -show drun"
+
+# Open website from my bookmark.
+bindsym $mod+u exec ~/.config/i3/webdmenu.sh 
+
+# Dictionary.
+bindsym $mod+w exec ~/.config/i3/dict.sh
+
+# Press the print button to got a full size screenshot and saved in screenshot folder.
 bindsym Print exec gnome-screenshot -f ~/Pictures/screenshot/$(date +%s).png
+
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
@@ -117,7 +128,7 @@ bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+# bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 bindsym $mod+space floating toggle
@@ -177,12 +188,28 @@ bindsym $mod+Ctrl+Left workspace prev
 bindsym $mod+Ctrl+Right workspace next
 
 bindsym $mod+Shift+c reload
-bindsym $mod+Shift+r restart
+bindsym $mod+Shift+r restart 
+
+# send a notice with now time and remind myself to rest.
 bindsym $mod+Shift+t exec ~/.config/scipts/notice.sh
+
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+# rest myself with 5min.
 bindsym $mod+Shift+p exec kitty --app-id=kitty-full countdown 5m 
 for_window [class="kitty-full"] fullscreen enable
+
+# resize mode
+# up, down, left, right to add or less the window size.
+# mod plus up and so on to move window position.
+# also j, k, l and ; but give the adjust biger.
+#
+# mod plus right mouth is adjust window position.
+# mod plus left mouth is adjust window size.
+#
+# t is use for turn on or off the touchpad.
+#
+# Enter, Escape, Return and so on can exit resize mode.
 
 mode "resize" {
         bindsym j resize shrink width 50 px or 50 ppt
@@ -206,7 +233,7 @@ mode "resize" {
         bindsym $mod+Left move left 10 px
         bindsym $mod+Right move right 10 px
         bindsym $mod+Down move down 10 px
-
+        bindsym t exec ~/.config/i3/touchpad.sh
         bindsym Return mode "default"
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
@@ -221,6 +248,10 @@ mode "raz" {
 		bindsym Enter mode "default"
 		bindsym $mod+Ctrl+r mode "default"
 }
+
+# Music mode
+# p(play, pause) and space for play or pause music.
+# left and right to change music now playing.
 
 mode "music" {
 		bindsym p exec playerctl play-pause
@@ -272,6 +303,8 @@ mode "$mode_system" {
 	  bindsym x exec xrandr --output DP-0 --auto
     bindsym Escape mode "default"
 }
+
+# every window if floating except some window list under this.
 
 # for_window [class="FlClash"] floating enable
 # for_window [class="QQ"] floating en0able
