@@ -52,6 +52,8 @@ exec --no-startup-id dunst
 exec --no-startup-id fcitx5
 exec --no-startup-id picom
 exec --no-startup-id mpd
+exec --no-startup-id setxkbmap -option caps:swapescape
+
 # exec --no-startup-id blueman-applet
 # exec --no-startup-id nm-applet
 # exec --no-startup-id pasystray
@@ -59,7 +61,7 @@ exec --no-startup-id mpd
 # exec --no-startup-id lxqt-policykit-agent
 
 exec_always autotiling
-exec_always feh --bg-fill ~/Pictures/dianjuren.png
+exec_always feh --bg-fill ~/Pictures/Useby/wallpaper.png
 
 exec_always unclutter -idle 1 -jitter 2 -root &
 # Use pactl to adjust volume in PulseAudio.
@@ -69,6 +71,8 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+bindsym XF86MonBrightnessDown, exec --no-startup-id brightnessctl set 5%-
+bindsym XF86MonBrightnessUp, exec --no-startup-id brightnessctl set 5%+
 
 floating_modifier $mod
 
@@ -199,6 +203,8 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym $mod+Shift+p exec kitty --app-id=kitty-full countdown 5m 
 for_window [class="kitty-full"] fullscreen enable
 
+set $timeout 800
+
 # resize mode
 # up, down, left, right to add or less the window size.
 # mod plus up and so on to move window position.
@@ -233,20 +239,20 @@ mode "resize" {
         bindsym $mod+Left move left 10 px
         bindsym $mod+Right move right 10 px
         bindsym $mod+Down move down 10 px
-        bindsym t exec ~/.config/i3/touchpad.sh
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
+        bindsym $mod+t exec ~/.config/i3/touchpad.sh
+        bindsym Return mode "default", exec notify-send -t $timeout "default mode"
+        bindsym Escape mode "default", exec notify-send -t $timeout "default mode"
+        bindsym $mod+r mode "default", exec notify-send -t $timeout "default mode"
 }
 
 mode "raz" {
 		bindsym j exec /home/szoloa/temp/raz/razcli
-		bindsym Escape mode "default"
-		bindsym Return mode "default"
-		bindsym $mod+r mode "default"
-		bindsym $mod+Shift+r mode "default"
-		bindsym Enter mode "default"
-		bindsym $mod+Ctrl+r mode "default"
+		bindsym Escape mode "default", exec notify-send -t $timeout "default mode"
+		bindsym Return mode "default", exec notify-send -t $timeout "default mode"
+		bindsym $mod+r mode "default", exec notify-send -t $timeout "default mode"
+		bindsym $mod+Shift+r mode "default", exec notify-send -t $timeout "default mode"
+		bindsym Enter mode "default", exec notify-send -t $timeout "default mode"
+		bindsym $mod+Ctrl+r mode "default", exec notify-send -t $timeout "default mode"
 }
 
 # Music mode
@@ -258,11 +264,11 @@ mode "music" {
 		bindsym space exec playerctl play-pause
 		bindsym Right exec playerctl next
 		bindsym Left exec palyerctl previous
-		bindsym Escape mode "default"
-		bindsym Return mode "default"
-		bindsym $mod+r mode "default"
-		bindsym $mod+m mode "default"
-		bindsym Enter mode "default"
+		bindsym Escape mode "default", exec notify-send -t $timeout "default mode"
+		bindsym Return mode "default", exec notify-send -t $timeout "default mode"
+		bindsym $mod+r mode "default", exec notify-send -t $timeout "default mode"
+		bindsym $mod+m mode "default", exec notify-send -t $timeout "default mode"
+		bindsym Enter mode "default", exec notify-send -t $timeout "default mode"
 }
 
 mode "mpc" {
@@ -274,20 +280,39 @@ mode "mpc" {
 		bindsym Up exec mpc seek -5%
     bindsym Down exec mpc seek +5%
 		bindsym u exec kitty ncmpcpp 
-		bindsym Escape mode "default"
-		bindsym Return mode "default"
-		bindsym $mod+r mode "default"
-		bindsym Ctrl+m mode "default"
-		bindsym Enter mode "default"
+		bindsym Escape mode "default", exec notify-send -t $timeout "default mode"
+		bindsym Return mode "default", exec notify-send -t $timeout "default mode"
+		bindsym $mod+r mode "default", exec notify-send -t $timeout "default mode"
+		bindsym Ctrl+m mode "default", exec notify-send -t $timeout "default mode"
+		bindsym Enter mode "default", exec notify-send -t $timeout "default mode"
 }
 
-bindsym $mod+Ctrl+r mode "raz" 
+mode "study" {
+    bindsym $mod+x exec pkill i3bar
+    bindsym $mod+p exec kitty --app-id=kitty-full countdown 5m
+    bindsym $mod+Shift+BackSpace kill
+    bindsym $mod+w exec ~/.config/i3/dict.sh
+    bindsym $mod+u exec ~/.config/i3/websearch.sh
+    bindsym $mod+t exec ~/.config/i3/sgpt.sh
+    bindsym $mod+Shift+t exec ~/.config/scipts/notice.sh
+    bindsym $mod+Shift+space focus mode_toggle
+    bindsym $mod+Left focus left
+    bindsym $mod+Down focus down
+    bindsym $mod+Up focus up
+    bindsym $mod+Right focus right
+    bindsym $mod+Escape mode "default", exec notify-send -t $timeout "default mode"
+    bindsym $mod+r mode "resize", exec notify-send -t $timeout "resize mode"
+}
 
-bindsym $mod+r mode "resize"
+bindsym $mod+Shift+s mode "study", exec notify-send -t $timeout "study mode"
 
-bindsym Ctrl+m mode "music"
+bindsym $mod+Ctrl+r mode "raz" , exec notify-send -t $timeout "raz mode"
 
-bindsym $mod+m mode "mpc"
+bindsym $mod+r mode "resize", exec notify-send -t $timeout "resize mode"
+
+bindsym Ctrl+m mode "music", exec notify-send -t $timeout "music mode"
+
+bindsym $mod+m mode "mpc", exec notify-send -t $timeout "mpc mode"
 
 #===power manager===
 set $mode_system select: lock(L) exit(E) suspend(S) reboot(R) poweroff(O) cancel(Esc)
@@ -301,7 +326,7 @@ mode "$mode_system" {
 	  bindsym p exec xrandr --output HDMI-0 --rate 75.00 --mode 2560x1440
 	  bindsym q exec xrandr --output DP-0 --off
 	  bindsym x exec xrandr --output DP-0 --auto
-    bindsym Escape mode "default"
+    bindsym Escape mode "default", exec notify-send -t $timeout "default mode"
 }
 
 # every window if floating except some window list under this.
@@ -328,6 +353,8 @@ for_window [class="Zotero"] floating disable
 for_window [class="mpv"] floating disable
 for_window [class="Google-chrome"] floating disable
 for_window [class="kitty-floating"] floating enable resize set 640 480, move position center
+for_window [class="chrome-floating"] floating enable resize set 1400 800, move position center
+for_window [class="chrome-full"] floating enable resize set 1920 1080, move position center
 for_window [class="obsidian"] floating disable
 
 bar {
