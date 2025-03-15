@@ -1,7 +1,7 @@
 #!/bin/bash
-song_info=$(playerctl -a metadata --format "{{title}} - {{status}}")
+song_info=$(playerctl -a metadata --format "{{title}}")
 
-mpd_info=$(mpc current -f "%title%")
+mpd_info=$(mpc current -f "%title%-%artist%")
 
 if [ -z "$song_info" ]; then
     if [ -z "$mpd_info"];then
@@ -10,5 +10,13 @@ if [ -z "$song_info" ]; then
 		echo "$mpd_info"
 	fi
 else
-    echo "$song_info"
+	if [ -z "$song_info"];then
+		echo "$song_info"
+	else
+		if [ -z $mpd_info];then
+			echo $song_info
+		else
+			echo "$song_info|$mpd_info"
+		fi
+	fi
 fi

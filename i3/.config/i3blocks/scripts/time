@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 设置上海时区并格式化时间
-time_str=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M')
+time_str=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M %Z')
 
 # 输出JSON格式
 echo $time_str
