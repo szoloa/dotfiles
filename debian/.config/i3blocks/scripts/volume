@@ -1,0 +1,11 @@
+#!/bin/bash
+# volume=$(wpctl get-volume @DEFAULT_SINK@ | awk '{print $2*100}')
+volume=$(pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '\d+(?=%)' | head -n 1)
+# mute=$(wpctl get-volume @DEFAULT_SINK@ | awk '{print $3}')
+mute=$(pactl get-sink-mute @DEFAULT_SINK@ | sed 's/是/YES/' | sed 's/否/NO/')
+
+echo Vol $volume% $mute
+if [[ $mute = "Mute: YES" ]]; then
+	echo
+	echo "#ff0000"
+fi

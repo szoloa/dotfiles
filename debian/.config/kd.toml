@@ -1,0 +1,15 @@
+paging = true
+pager_command = "less -R"
+auto_clear = false
+english_only = false
+theme = "temp"
+http_proxy = ""
+clear_screen = false
+freq_alert = false
+
+[logging]
+  enable = true
+  path = ""
+  level = "info"
+  stderr = false
+  redirect_to_stream = false

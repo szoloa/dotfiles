@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# 获取根分区可用空间（单位：GiB）
+free_disk=$(df -h / | awk '/\// {print $4}' | sed 's/Gi/ GiB/')
+
+# 输出JSON格式
+echo Disk $free_disk

@@ -1,0 +1,14 @@
+#!/bin/bash
+song_info=$(playerctl -a metadata --format "{{title}} - {{status}}")
+
+mpd_info=$(mpc current -f "%title%")
+
+if [ -z "$song_info" ]; then
+    if [ -z "$mpd_info"];then
+		echo "No song playing"
+	else
+		echo "$mpd_info"
+	fi
+else
+    echo "$song_info"
+fi

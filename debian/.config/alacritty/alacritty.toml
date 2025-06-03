@@ -1,0 +1,31 @@
+[font]
+normal = { family = "JetBrains Mono Nerd Font", style = "Regular" }
+bold = { family = "JetBrains Mono Nerd Font", style = "bold" }
+italic = { family = "JetBrains Mono Nerd Font", style = "italic" }
+bold_italic = { family = "JetBrains Mono Nerd Font", style = "bold italic" }
+size = 16
+
+[colors.primary]
+foreground = '#000000'
+background = '#ffffff'
+
+[colors.normal]
+black = "#ffffff"
+red = "#111be0"
+green = "#4cd964"
+yellow = "#ffcc00"
+blue = "#007aff"
+magenta = "#ff2d55"
+cyan = "#5ac8fa"
+white = "#000000"
+
+[colors.bright]
+black = "#686868"
+red = "#ff3b30"
+green = "#4cd964"
+yellow = "#ffcc00"
+blue = "#007aff"
+magenta = "#ff2d55"
+cyan = "#5ac8fa"
+white = "#ffffff"
+ 

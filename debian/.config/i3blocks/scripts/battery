@@ -1,0 +1,12 @@
+#!/bin/bash
+
+battery_path="/sys/class/power_supply/BAT0"
+if [ ! -d "$battery_path" ]; then
+    echo "{\"full_text\":\"Battery N/A\"}"
+    exit 0
+fi
+
+capacity=$(cat "$battery_path/capacity")
+status=$(cat "$battery_path/status")
+
+echo Bat $capacity%

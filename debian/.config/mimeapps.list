@@ -1,0 +1,11 @@
+[Default Applications]
+application/octet-stream=chromium.desktop
+clash=clash-verge-handler.desktop
+clash-verge=clash-verge-handler.desktop
+x-scheme-handler/clash=clash-verge.desktop
+application/pdf=okularApplication_pdf.desktop
+
+[Added Associations]
+application/octet-stream=org.kde.ark.desktop;chromium.desktop;
+image/jpeg=gimp.desktop;
+

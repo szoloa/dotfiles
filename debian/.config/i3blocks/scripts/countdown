@@ -1,0 +1,17 @@
+#!/bin/bash
+
+end_time=$(cat ~/.config/i3blocks/scripts/countDown)
+end_timestamp=$(date -d "$end_time" +%s)
+
+current_timestamp=$(date +%s)
+
+remain=$((end_timestamp - current_timestamp))
+
+if [ $remain -le 0 ];then
+	echo "Finished"
+else
+	minutes=$((remain / 60))
+	seconds=$((remain % 60))
+	echo "$minutes:$seconds"
+fi
+
