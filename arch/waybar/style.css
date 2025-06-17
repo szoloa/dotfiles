@@ -1,0 +1,131 @@
+* {
+  font-family: "JetBrainsMono Nerd Font";
+  font-weight: bold;
+  font-size: 16px;
+  min-height: 0;
+  padding: 0;
+  border: none;
+  margin: 1px;
+}
+
+@import "theme.css";
+
+/* === Main Background === */
+
+window#waybar {
+  background: @main-bg;
+}
+
+tooltip {
+  background: @main-bg;
+  border: solid;
+  border-width: 1.5px;
+  border-radius: 8px;
+  border-color: @main-br;
+}
+tooltip label {
+  color: @main-fg;
+  font-weight: normal;
+  margin: -1.5px 3px;
+}
+
+#workspaces {
+	background: @main-fg;
+	margin: 0px 5px 0px 5px;
+  padding: 5px 5px 5px 5px;
+	border-radius: 16px;
+  border: solid 0px @main-fg;
+}
+
+#workspaces button {
+    padding: 0px 5px;
+    border-radius: 16px;
+    color: #928374;
+}
+
+#workspaces button.active {
+    color: #f4d9e1;
+    background-color: transparent;
+    border-radius: 16px;
+}
+
+#workspaces button:hover {
+	background-color: #E6B9C6;
+	color: black;
+	border-radius: 16px;
+}
+
+#submap {
+  background-color: #982014;
+  border-radius: 16px;
+}
+
+#cpu,
+#mpd,
+#custom-gpu,
+#custom-spotify,
+#workspaces,
+#window,
+#memory,
+#submap,
+#clock,
+#bluetooth,
+#pulseaudio,
+#disk,
+#battery {
+  opacity: 1;
+  color: @module-fg;
+  margin-bottom: 0;
+  padding: 0 10px;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0);
+}
+
+#workspaces {
+  background: @workspaces;
+}
+
+#clock.time {
+  background: @time;
+}
+
+#clock.date {
+  background: @date;
+}
+
+#bluetooth {
+  padding-right: 5px;
+  background: @tray;
+}
+
+#bluetooth:hover {
+  color: @hover-fg;
+  text-shadow: none;
+  box-shadow: none;
+}
+
+#pulseaudio:hover {
+  color: @hover-fg;
+  text-shadow: none;
+  box-shadow: none;
+}
+
+#tray {
+  background-color: rgba(30, 31, 41, 0.8);  /* 半透明深色背景 */
+  border-radius: 12px;                      /* 圆角大小 */
+  padding: 0 12px;                          /* 左右内边距 */
+  margin: 0px 10px 0px 0px;                          /* 外边距 */
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;                    /* 非活动图标变暗 */
+  margin: 0 20px;                            /* 图标间距 */
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;              /* 需要关注的图标高亮 */
+  animation: pulse 2s infinite;
+}
+
+#pulseaudio.muted {
+    color: #aa101a;
+}

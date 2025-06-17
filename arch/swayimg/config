@@ -1,0 +1,2 @@
+[keys.gallery]
+Shift+s = exec ~/.config/scipts/wallpaper.sh "%" &

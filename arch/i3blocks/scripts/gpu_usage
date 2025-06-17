@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# 检查nvidia-smi是否可用
+if ! command -v nvidia-smi &>/dev/null; then
+  echo "GPU: N/A"
+  exit 0
+fi
+
+# 获取第一个GPU的使用率（纯数字）
+gpu_usage=$(nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits | awk '{print $1}' | tr -d '% ')
+
+# 处理获取失败的情况
+if [ -z "$gpu_usage" ]; then
+  echo "GPU: ERR"
+  exit 0
+fi
+
+# 设置颜色阈值（可自定义）
+color="#FFFFFF"                                                   # 默认白色
+[ $gpu_usage -ge 90 ] && color="#FF0000"                          # 严重负载 >90% 红色
+[ $gpu_usage -ge 70 ] && [ $gpu_usage -lt 90 ] && color="#FFFF00" # 高负载 >70% 黄色
+
+# i3blocks输出格式
+echo "GPU ${gpu_usage}%"
+echo
+echo "$color"
+
+exit 0

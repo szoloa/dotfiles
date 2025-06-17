@@ -1,0 +1,68 @@
+{
+    "modules-center": ["hyprland/workspaces"],
+    "modules-left": [ "custom/spotify", "hyprland/window", "hyprland/submap"],
+    "hyprland/window":{"format":"{title}"},
+    "modules-right": ["mpd", "disk", "cpu", "custom/gpu", "memory" ,"pulseaudio", "battery", "clock","tray"],
+    "hyprland/workspaces":{
+        "format":"{icon}",
+        "on-scroll-up":"hyprctl dispatch workspace e-1",
+        "on-scroll-down":"hyprctl dispatch workspace e+1",
+      },
+        "cpu": {
+        "format": "CPU {usage}%"
+    },
+    "disk": {
+        "format": "Disk {specific_free:0.0f}GB", 
+        "unit" : "GB"
+    },
+    "memory": {
+        "format": "Mem {}%"
+    },
+    "battery": {
+        "bat": "BAT0",
+        "format": "Bat: {capacity}%",
+    },
+    "pulseaudio": {
+        "format": "Vol: {volume}%", 
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-click-middle": "kitty --class kitty-float fish -c fish_sink"
+    },
+    "custom/gpu": {
+      "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits | awk '{print $1}' | tr -d '% '",
+      "format": "GPU {}%",
+      "interval": 5
+    },
+    "custom/spotify": {
+      "exec": "playerctl -p spotify metadata --format \"{{title}}\"",
+      "format": "{}",
+      "on-click": "playerctl -p spotify play-pause",
+      "on-scroll-up":"hyprctl dispatch workspace e-1",
+      "on-scroll-down":"hyprctl dispatch workspace e+1", 
+      "interval": 5
+    },
+    
+    "clock": {
+        "format": "{:%Y-%m-%d %H:%M}", 
+        "tooltip-format": "{calendar}",
+        "calendar": {
+                    "mode"          : "months",
+                    "mode-mon-col"  : 3,
+                    "weeks-pos"     : "right",
+                    "on-scroll"     : 1,
+                    "format": {
+                              "months":     "<span color='#ffead3'><b>{}</b></span>",
+                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                              "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                              }
+                    },
+        "actions":  {
+                    "on-click-right": "mode",
+                    "on-click-forward": "tz_up",
+                    "on-click-backward": "tz_down",
+                    "on-scroll-up": "shift_up",
+                    "on-scroll-down": "shift_down"
+                    }
+    },
+},

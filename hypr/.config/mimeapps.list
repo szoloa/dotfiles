@@ -1,9 +1,0 @@
-[Default Applications]
-application/octet-stream=mpv.desktop
-application/pdf=okularApplication_pdf.desktop
-inode/directory=Thunar.desktop
-image/jpeg=Firefox.desktop
-
-[Added Associations]
-application/octet-stream=mpv.desktop;
-application/pdf=okularApplication_pdf.desktop;
