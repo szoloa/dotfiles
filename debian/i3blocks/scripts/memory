@@ -1,9 +1,16 @@
 #!/bin/bash
 
 # 获取内存使用量（单位：GiB）
-used_mem=$(free -m | awk '/内存/ {printf "%.1f", $3/1024}')
+used_mem_raw=$(LC_ALL=C free -m | awk '/Mem/ {printf "%.1f", $3/1024}')
+used_mem=${used_mem_raw/.*}
 
-# 输出JSON格式
-echo Mem ${used_mem}G
+color="#000000"
+if [ "$used_mem" -gt 10 ]; then
+    color="#FF0000"
+elif [ "$used_mem" -gt 5 ]; then
+    color="#FFA500"
+fi
+
+echo "<span color='$color'> ${used_mem_raw}G</span>"
 
 

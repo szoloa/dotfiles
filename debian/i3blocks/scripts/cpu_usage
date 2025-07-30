@@ -1,4 +1,12 @@
 #!/bin/bash
-cpu_usage=$(top -bn1 | grep "Cpu(s)" | awk '{print $2 + $4}')
+cpu_usage_raw=$(top -bn1 | grep "Cpu(s)" | awk '{print $2 + $4}')
+cpu_usage=${cpu_usage_raw/.*}
 
-echo CPU $cpu_usage%
+color="#000000"
+if [ "$cpu_usage" -gt 80 ]; then
+    color="#FF0000"
+elif [ "$cpu_usage" -gt 50 ]; then
+    color="#FFA500"
+fi
+
+echo "<span color='$color'> $cpu_usage_raw%</span>"

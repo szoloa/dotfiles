@@ -2,11 +2,32 @@
 
 battery_path="/sys/class/power_supply/BAT0"
 if [ ! -d "$battery_path" ]; then
-    echo "{\"full_text\":\"Battery N/A\"}"
+    echo " N/A"
     exit 0
 fi
 
 capacity=$(cat "$battery_path/capacity")
 status=$(cat "$battery_path/status")
 
-echo Bat $capacity%
+color="#000000"
+if [ "$capacity" -lt 20 ]; then
+    color="#FF0000"
+elif [ "$capacity" -lt 50 ]; then
+    color="#FFA500"
+fi
+
+if [ "$status" = "Charging" ]; then
+    icon=""
+elif [ "$capacity" -gt 95 ]; then
+    icon=""
+elif [ "$capacity" -gt 75 ]; then
+    icon=""
+elif [ "$capacity" -gt 50 ]; then
+    icon=""
+elif [ "$capacity" -gt 25 ]; then
+    icon=""
+else
+    icon="" 
+fi
+
+echo "<span color='$color'>$icon $capacity%</span>"

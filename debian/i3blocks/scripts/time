@@ -4,4 +4,4 @@
 time_str=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M')
 
 # 输出JSON格式
-echo $time_str
+echo "$time_str"

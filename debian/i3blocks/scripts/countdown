@@ -1,17 +1,25 @@
 #!/bin/bash
 
-end_time=$(cat ~/.config/i3blocks/scripts/countDown)
-end_timestamp=$(date -d "$end_time" +%s)
+# Path to the file storing the end time
+end_time_file="$HOME/.config/i3blocks/scripts/countDown"
 
+# Check if the end time file exists and is not empty
+if [ ! -s "$end_time_file" ]; then
+    echo " No Countdown"
+    exit 0
+fi
+
+end_time=$(cat "$end_time_file")
+end_timestamp=$(date -d "$end_time" +%s)
 current_timestamp=$(date +%s)
 
 remain=$((end_timestamp - current_timestamp))
 
-if [ $remain -le 0 ];then
-	echo "Finished"
+if [ $remain -le 0 ]; then
+    echo " Finished"
 else
-	minutes=$((remain / 60))
-	seconds=$((remain % 60))
-	echo "$minutes:$seconds"
+    minutes=$((remain / 60))
+    seconds=$((remain % 60))
+    # Use printf for better formatting, e.g., 05:03 instead of 5:3
+    printf "⏳ %02d:%02d\n" "$minutes" "$seconds"
 fi
-
