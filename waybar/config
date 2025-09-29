@@ -1,0 +1,40 @@
+{
+    "modules-center": ["hyprland/workspaces"],
+    "modules-left": ["mpd", "hyprland/window", "hyprland/submap"],
+    "hyprland/window":{"format":"{title}"},
+    "modules-right": ["custom/data-down","disk", "cpu", "memory" ,"pulseaudio", "battery", "clock", "tray"],
+    "hyprland/workspaces":{
+        "format":"{icon}",
+        "on-scroll-up":"hyprctl dispatch workspace e-1",
+        "on-scroll-down":"hyprctl dispatch workspace e+1"
+    },
+        "cpu": {
+        "format": "CPU {usage}%"
+    },
+    "disk": {
+        "format": "Disk {specific_free:0.0f}GB", 
+        "unit" : "GB"
+    },
+    "memory": {
+        "format": "Mem {}%"
+    },
+    "battery": {
+        "bat": "BAT0",
+        "format": "Bat: {capacity}%"
+    },
+    "pulseaudio": {
+        "format": "Vol: {volume}%", 
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-click-middle": "kitty --class kitty-float fish -c fish_sink"
+    },
+    "clock": {
+    },
+    "mpd":{
+    	"format": "{title}",
+    },
+    "custom/data-down":{
+        "exec": "~/.config/scipts/date-countdown-waybar.sh",
+        "format": "{text}",
+        "interval": 600,
+    },
+},
