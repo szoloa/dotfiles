@@ -46,7 +46,7 @@ tooltip label {
 #workspaces button.active {
     color: #f4d9e1;
     background-color: transparent;
-    border-radius: 14px;
+    border-radius: 16px;
 }
 
 #workspaces button:hover {

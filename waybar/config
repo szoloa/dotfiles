@@ -1,6 +1,6 @@
 {
-    "modules-center": ["hyprland/workspaces"],
-    "modules-left": ["mpd", "hyprland/window", "hyprland/submap"],
+    "modules-center": ["niri/workspaces"],
+    "modules-left": ["mpd", "niri/window", "hyprland/submap"],
     "hyprland/window":{"format":"{title}"},
     "modules-right": ["custom/data-down","disk", "cpu", "memory" ,"pulseaudio", "battery", "clock", "tray"],
     "hyprland/workspaces":{

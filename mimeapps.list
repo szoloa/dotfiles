@@ -58,3 +58,4 @@ application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoff
 video/x-flv=mpv.desktop;
 video/x-mjpeg=sxiv.desktop;
 application/x-bittorrent=org.qbittorrent.qBittorrent.desktop;
+x-scheme-handler/baiduyunguanjia=baidunetdisk.desktop
