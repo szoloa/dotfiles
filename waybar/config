@@ -1,6 +1,6 @@
 {
     "modules-center": ["niri/workspaces"],
-    "modules-left": ["mpd", "niri/window", "hyprland/submap"],
+    "modules-left": ["niri/window", "custom/player-percent", "mpd", "hyprland/submap"],
     "hyprland/window":{"format":"{title}"},
     "modules-right": ["custom/data-down","disk", "cpu", "memory" ,"pulseaudio", "battery", "clock", "tray"],
     "hyprland/workspaces":{
@@ -8,7 +8,18 @@
         "on-scroll-up":"hyprctl dispatch workspace e-1",
         "on-scroll-down":"hyprctl dispatch workspace e+1"
     },
-        "cpu": {
+    "niri/workspaces":{
+        "format":"{icon}",
+        "format-icons": {
+            "active": "",
+            "urgent": "",
+            "default": ""
+    }
+    },
+    "niri/window":{
+        "format":"Soft: {app_id}",
+    },
+    "cpu": {
         "format": "CPU {usage}%"
     },
     "disk": {
@@ -31,10 +42,19 @@
     },
     "mpd":{
     	"format": "{title}",
+        "on-click": "mpc toggle",
     },
     "custom/data-down":{
         "exec": "~/.config/scipts/date-countdown-waybar.sh",
         "format": "{text}",
         "interval": 600,
+    },
+    "custom/player-percent":{
+        "exec": "~/.config/scipts/player-percent.sh",
+        "format": "{text}",
+        "interval": 2,
+        "on-click": "playerctl play-pause",
+        "on-scroll-up":"playerctl position 10-",
+        "on-scroll-down":"playerctl position 10+"
     },
 },

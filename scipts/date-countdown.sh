@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Echo the distants of 12.20.
+# 
+
 x=$(date -d "Dec 20" +%j)
 
 y=$(date +%j)

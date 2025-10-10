@@ -1,4 +1,4 @@
-paging = false
+paging = true
 pager_command = "less -R"
 auto_clear = false
 english_only = false

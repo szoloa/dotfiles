@@ -1,7 +1,21 @@
-show=drun
-width=650
-height=450
-columns=1
-location=center
-insensitive=false
-animation=false
+# Wofi configuration file
+# For a start-menu style launcher with categories
+
+# Mode
+# drun mode reads .desktop files and automatically categorizes applications.
+mode=drun
+
+# Appearance
+width=50%
+height=60%
+
+prompt=Search Apps...
+show_icons=true
+image_size=32
+insensitive=true
+
+# Point to your existing stylesheet
+stylesheet=/home/kina/.config/wofi/style.css
+
+# Misc
+allow_images=true

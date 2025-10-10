@@ -1,0 +1,19 @@
+[general]
+# mode = gallery
+decoration = yes
+size = 720,480
+
+[viewer]
+window = #000000ff
+
+[gallery]
+window = #000000ff
+
+[keys.gallery]
+Shift+s = exec ~/.config/scipts/wallpaper.sh "%" &
+j = step_down
+h = step_left
+k = step_up
+l = step_right
+Ctrl+c = exec wl-copy "%" 
+Ctrl+Shift+c = exec wl-copy < "%" 

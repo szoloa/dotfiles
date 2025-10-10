@@ -125,7 +125,7 @@ layout {
     // - "always", the focused column will always be centered.
     // - "on-overflow", focusing a column will center it if it doesn't fit
     //   together with the previously focused column.
-    center-focused-column "never"
+    center-focused-column "always"
 
     // always-center-single-column
     // empty-workspace-above-first
@@ -282,8 +282,10 @@ spawn-at-startup "waybar"
 spawn-at-startup "mako"
 
 spawn-at-startup "fcitx5"
-spawn-sh-at-startup "swaybg -i ~/Pictures/Wallpapers/wallhaven-3qz6m3.jpg"
+spawn-sh-at-startup "swaybg -i ~/Pictures/Wallpapers/wallhaven-7j2z53.png"
 
+spawn-at-startup "mpd"
+spawn-at-startup "gammastep"
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 
@@ -377,7 +379,7 @@ binds {
     // when running as a winit window.
     //
     // Most actions that you can bind here can also be invoked programmatically with
-    // `niri msg action do-something`.
+   // `niri msg action do-something`.
 
     // Mod-Shift-/, which is usually the same as Mod-?,
     // shows a list of important hotkeys.
@@ -396,8 +398,8 @@ binds {
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.
     // Using spawn-sh allows to pass multiple arguments together with the command.
-    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ && ~/.config/scipts/wp-vol.sh"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- && ~/.config/scipts/wp-vol.sh"; }
     XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
 
@@ -579,6 +581,7 @@ binds {
 
     Mod+C { center-column; }
 
+    Alt+W { spawn-sh "~/.config/scipts/dict.sh"; }
     // Center all fully visible columns on screen.
     Mod+Ctrl+C { center-visible-columns; }
 

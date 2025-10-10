@@ -122,10 +122,6 @@
     ),
     tabs: [
         (
-            name: "Lyrics",
-            pane: Pane(Lyrics),
-        ),
-        (
             name: "Queue",
             pane: Split(
                 direction: Horizontal,
@@ -155,6 +151,10 @@
         (
             name: "Search",
             pane: Pane(Search),
+        ),
+        (
+            name: "Lyrics",
+            pane: Pane(Lyrics),
         ),
     ],
 )
