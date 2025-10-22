@@ -27,6 +27,12 @@ x-scheme-handler/clash=clash-verge.desktop
 application/atom+xml=firefox.desktop
 video/x-mjpeg=swayimg.desktop
 application/x-bittorrent=firefox.desktop
+x-scheme-handler/tg=org.telegram.desktop.desktop
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;
+x-scheme-handler/mailto=userapp-Thunderbird-2BR6D3.desktop
+message/rfc822=userapp-Thunderbird-2BR6D3.desktop
+x-scheme-handler/mid=userapp-Thunderbird-2BR6D3.desktop
+image/x-xcursor=org.xfce.ristretto.desktop
 
 [Added Associations]
 application/x-zerosize=kitty.desktop;
@@ -60,3 +66,7 @@ video/x-mjpeg=sxiv.desktop;
 application/x-bittorrent=org.qbittorrent.qBittorrent.desktop;
 x-scheme-handler/baiduyunguanjia=baidunetdisk.desktop
 image/gif=swayimg.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-UN1XD3.desktop;userapp-Telegram Desktop-52REE3.desktop;org.telegram.desktop.desktop;
+x-scheme-handler/mailto=userapp-Thunderbird-2BR6D3.desktop;
+x-scheme-handler/mid=userapp-Thunderbird-2BR6D3.desktop;
+image/x-xcursor=org.xfce.ristretto.desktop;

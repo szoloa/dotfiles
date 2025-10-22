@@ -24,6 +24,7 @@
     },
     "disk": {
         "format": "Disk {specific_free:0.0f}GB", 
+        "on-click-middle": "thunar",
         "unit" : "GB"
     },
     "memory": {
@@ -43,6 +44,7 @@
     "mpd":{
     	"format": "{title}",
         "on-click": "mpc toggle",
+        "on-click-middle": "kitty --class kitty-float rmpc -c ~/.config/rmpc/simple-config.ron -t ~/.config/rmpc/themes/simple.ron"
     },
     "custom/data-down":{
         "exec": "~/.config/scipts/date-countdown-waybar.sh",

@@ -44,7 +44,7 @@ tooltip label {
 #workspaces button {
   color: #5b6078;
   background: none;
-  padding: 0 2px;
+  padding: 0 0px;
 }
 #workspaces button:hover {
   color: #a6da95;
@@ -89,6 +89,8 @@ tooltip label {
 #mpd,
 #custom-gpu,
 #custom-spotify,
+#custom-player-percent,
+#custom-data-down,
 #workspaces,
 #window,
 #memory,
