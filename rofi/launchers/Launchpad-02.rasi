@@ -1,0 +1,226 @@
+/**
+ *
+ * Author : Pavel Sibal
+ *
+ * Launchpad 04 - Gray
+ *
+ * Rofi Version: 1.7.3
+ *
+ **/
+
+/*****----- Configuration -----*****/
+configuration {
+    no-lazy-grab:               true;
+    modi:                       "drun";
+    show-icons:                 true;
+    display-drun:               "";
+    drun-display-format:        "{name}";
+    disable-history:            true;
+    me-select-entry:            "MouseSecondary";
+    me-accept-entry:            "MousePrimary";
+}
+
+/***************************************/
+/*****----- Global Properties -----*****/
+/***************************************/
+
+/*****----- Solid Light Background -----*****/
+/* for enable remove
+* {
+   background:     #F5F5F5FF;
+   background-alt: #E4E4E4FF;
+   foreground:     #000000FF;
+   selected:       #EBEBEBFF;
+   border:         #00000026;
+   border-radius:  0px; /* 12px for rounded corners */
+   fullscreen:     true;
+}
+for enable remove */
+
+
+/*****----- Light background + Alpha -----*****/
+/* for enable remove
+* {
+   background:     #F5F5F5D9;
+   background-alt: #F5F5F503;
+   foreground:     #000000FF;
+   selected:       #F5F5F503;
+   border:         #0000002B;
+   border-radius:  0px; /* 12px for rounded corners */
+   fullscreen:     true;
+}
+for enable remove */
+
+/*****----- Solid Gray Background -----*****/
+/* for enable remove
+* {
+   background:     #2A2A2AFF;
+   background-alt: #FFFFFF33;
+   foreground:     #FFFFFFFF;
+   selected:       #FFFFFF26;
+   border:         #FFFFFF40;
+   border-radius:  0px; /* 12px for rounded corners */
+   fullscreen:     true;
+}
+for enable remove */
+
+/*****----- Gray background + Alpha -----*****/
+* {
+   background:     #2A2A2AD9;
+   background-alt: #FFFFFF33;
+   foreground:     #FFFFFFFF;
+   selected:       #FFFFFF26;
+   border:         #FFFFFF40;
+   border-radius:  0px; /* 12px for rounded corners */
+   fullscreen:     true;
+}
+
+/*****----- Main Window -----*****/
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    height:                      97%;
+    width:                       95%;
+    x-offset:                    0px;
+    y-offset:                    0px;
+    enabled:                     true;
+    margin:                      0px;
+    border:                      0px solid;
+    border-radius:               @border-radius;
+    border-color:                @border;
+    background-color:            @background;
+    cursor:                      "default";
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     20px;
+    margin:                      0px;
+    padding:                     80px 125px;
+    border:                      0px solid;
+    border-radius:               0px 0px 0px 0px;
+    border-color:                @border;
+    background-color:            transparent;
+    children:                    [ "inputbar", "listview" ];
+}
+
+/*****----- Inputbar -----*****/
+inputbar {
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      0% 20%;
+    padding:                     10px;
+    border:                      1px solid;
+    border-radius:               6px;
+    border-color:                @border;
+    background-color:            @background-alt;
+    text-color:                  @foreground;
+    children:                    [ "prompt", "entry" ];
+}
+
+prompt {
+    enabled:                     true;
+    background-color:            transparent;
+    text-color:                  inherit;
+}
+textbox-prompt-colon {
+    enabled:                     true;
+    expand:                      false;
+    str:                         "::";
+    background-color:            transparent;
+    text-color:                  inherit;
+}
+entry {
+    enabled:                     true;
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      text;
+    placeholder:                 "Search...";
+    placeholder-color:           inherit;
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     9;
+    lines:                       5;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+
+    spacing:                     0px;
+    margin:                      0px;
+    padding:                 	 25px 0px 0px 0px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @border;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      "default";
+}
+scrollbar {
+    handle-width:                5px ;
+    handle-color:                @selected;
+    border-radius:               0px;
+    background-color:            @background-alt;
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    spacing:                     15px;
+    margin:                      0px;
+    padding:                     20px 10px;
+    border:                      0px solid;
+    border-radius:               10px;
+    border-color:                @border;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    orientation:                 vertical;
+    cursor:                      pointer;
+}
+element normal.normal {
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
+element selected.normal {
+    background-color:            @selected;
+    text-color:                  @foreground;
+}
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    size:                        48px;
+    cursor:                      inherit;
+}
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    highlight:                   inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}
+
+/*****----- Message -----*****/
+error-message {
+    padding:                     15px;
+    border:                      2px solid;
+    border-radius:               10px;
+    border-color:                @border;
+    background-color:            @background;
+    text-color:                  @foreground;
+}
+textbox {
+    background-color:            transparent;
+    text-color:                  @foreground;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+    highlight:                   none;
+}

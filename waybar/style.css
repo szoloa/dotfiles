@@ -99,6 +99,8 @@ tooltip label {
 #bluetooth,
 #pulseaudio,
 #disk,
+#mpris,
+#network,
 #battery {
   opacity: 1;
   color: @module-fg;
@@ -129,12 +131,13 @@ tooltip label {
   text-shadow: none;
   box-shadow: none;
 }
-
+/*
 #pulseaudio:hover {
   color: @hover-fg;
   text-shadow: none;
   box-shadow: none;
 }
+*/
 
 #tray {
   background-color: rgba(30, 31, 41, 0.8);  /* 半透明深色背景 */
@@ -153,6 +156,12 @@ tooltip label {
   animation: pulse 2s infinite;
 }
 
+#network.disconnected,
 #pulseaudio.muted {
     color: #aa101a;
 }
+/*
+window#waybar.empty #window{
+  background-color: #aa101a;
+}
+*/

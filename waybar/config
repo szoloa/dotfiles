@@ -1,8 +1,8 @@
 {
     "modules-center": ["niri/workspaces"],
-    "modules-left": ["niri/window", "custom/player-percent", "mpd", "hyprland/submap"],
+    "modules-left": ["niri/window", "custom/player-percent", "mpd" ,"mpris" , "hyprland/submap"],
     "hyprland/window":{"format":"{title}"},
-    "modules-right": ["custom/data-down","disk", "cpu", "memory" ,"pulseaudio", "battery", "clock", "tray"],
+    "modules-right": ["custom/data-down","disk", "cpu", "memory" ,"pulseaudio", "battery", "network", "clock", "tray"],
     "hyprland/workspaces":{
         "format":"{icon}",
         "on-scroll-up":"hyprctl dispatch workspace e-1",
@@ -17,14 +17,27 @@
     }
     },
     "niri/window":{
-        "format":"Soft: {app_id}",
+        "format":"Soft {app_id}",
+        "max-length": 50,
+        "on-click":"rofi -show drun -theme ~/.config/rofi/launchers/Launchpad-02.rasi",
+        "on-click-middle":"niri msg action maximize-column",
+        "on-click-right":"niri msg action close-window",
+    },
+    "mpris":{
+        "format":"{player} ({status})",
+    },
+    "network":{
+        "format":"Online",
+        "format-disconnected": "Offline",
+        "on-click":"nmcli networking off",
+        "on-click-middle":"kitty --class kitty-float fish -c fish_network",
     },
     "cpu": {
         "format": "CPU {usage}%"
     },
     "disk": {
         "format": "Disk {specific_free:0.0f}GB", 
-        "on-click-middle": "thunar",
+        "on-click": "thunar",
         "unit" : "GB"
     },
     "memory": {
@@ -32,14 +45,15 @@
     },
     "battery": {
         "bat": "BAT0",
-        "format": "Bat: {capacity}%"
+        "format": "Bat {capacity}%"
     },
     "pulseaudio": {
-        "format": "Vol: {volume}%", 
+        "format": "Vol {volume}%", 
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
         "on-click-middle": "kitty --class kitty-float fish -c fish_sink"
     },
     "clock": {
+        "tooltip-format": "{:%Y-%m-%d}",
     },
     "mpd":{
     	"format": "{title}",
