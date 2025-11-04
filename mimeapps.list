@@ -1,5 +1,5 @@
 [Default Applications]
-application/x-zerosize=kitty.desktop
+application/x-zerosize=org.xfce.mousepad.desktop
 application/pdf=okularApplication_pdf.desktop;
 application/octet-stream=mpv.desktop
 image/jpeg=swayimg.desktop
@@ -27,15 +27,17 @@ x-scheme-handler/clash=clash-verge.desktop
 application/atom+xml=firefox.desktop
 video/x-mjpeg=swayimg.desktop
 application/x-bittorrent=firefox.desktop
-x-scheme-handler/tg=org.telegram.desktop.desktop
+x-scheme-handler/tg=org.telegram.desktop._7302edef3e24e125057cae22ca06a523.desktop
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;
 x-scheme-handler/mailto=userapp-Thunderbird-2BR6D3.desktop
 message/rfc822=userapp-Thunderbird-2BR6D3.desktop
 x-scheme-handler/mid=userapp-Thunderbird-2BR6D3.desktop
 image/x-xcursor=org.xfce.ristretto.desktop
+inner/director=thunar.desktop
+inode/directory=thunar.desktop
 
 [Added Associations]
-application/x-zerosize=kitty.desktop;
+application/x-zerosize=org.xfce.mousepad.desktop;kitty.desktop;
 application/zip=xarchiver.desktop;
 text/plain=snapgene-viewer.desktop;okularApplication_txt.desktop;org.xfce.mousepad.desktop;
 x-scheme-handler/http=chromium.desktop;xfce4-web-browser.desktop;com.google.Chrome.desktop;
@@ -53,7 +55,7 @@ application/x-extension-shtml=zen.desktop;
 application/xhtml+xml=zen.desktop;com.google.Chrome.desktop;
 application/x-extension-xhtml=zen.desktop;
 application/x-extension-xht=zen.desktop;
-image/png=feh.desktop;swayimg.desktop;
+image/png=swappy.desktop;feh.desktop;swayimg.desktop;
 inode/directory=thunar.desktop;
 application/wps-office.ppt=wps-office-wpp.desktop;
 application/atom+xml=org.qutebrowser.qutebrowser.desktop;
