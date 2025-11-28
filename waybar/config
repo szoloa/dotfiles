@@ -1,6 +1,6 @@
 {
     "modules-center": ["niri/workspaces"],
-    "modules-left": ["niri/window", "custom/player-percent", "mpd" ,"mpris" , "hyprland/submap"],
+    "modules-left": ["niri/window", "custom/player-percent", "mpd", "mpris", "hyprland/submap"],
     "hyprland/window":{"format":"{title}"},
     "modules-right": ["custom/data-down","disk", "cpu", "memory" ,"pulseaudio", "battery", "network", "clock", "tray"],
     "hyprland/workspaces":{
@@ -18,19 +18,20 @@
     },
     "niri/window":{
         "format":"Soft {app_id}",
+        "format-empty":"Soft {app_id}",
         "max-length": 50,
-        "on-click":"rofi -show drun -theme ~/.config/rofi/launchers/Launchpad-02.rasi",
-        "on-click-middle":"niri msg action maximize-column",
+        "on-click-middle":"rofi -show drun -theme ~/.config/rofi/launchers/Launchpad-02.rasi",
+        "on-click":"niri msg action maximize-column",
         "on-click-right":"niri msg action close-window",
     },
     "mpris":{
         "format":"{player} ({status})",
     },
     "network":{
-        "format":"Online",
-        "format-disconnected": "Offline",
+        "format":"Wifi",
+        "format-disconnected": "Local",
         "on-click":"nmcli networking off",
-        "on-click-middle":"kitty --class kitty-float fish -c fish_network",
+        "on-click-right":"nmcli networking on",
     },
     "cpu": {
         "format": "CPU {usage}%"
@@ -50,7 +51,7 @@
     "pulseaudio": {
         "format": "Vol {volume}%", 
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-        "on-click-middle": "kitty --class kitty-float fish -c fish_sink"
+        "on-click-middle": "pavucontrol"
     },
     "clock": {
         "tooltip-format": "{:%Y-%m-%d}",

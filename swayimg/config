@@ -17,3 +17,7 @@ k = step_up
 l = step_right
 Ctrl+c = exec wl-copy "%" 
 Ctrl+Shift+c = exec wl-copy < "%" 
+
+[keys.viewer]
+Shift+i = exec convert "%" -channel RGB -negate - | swayimg -
+BackSpace = exit

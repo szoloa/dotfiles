@@ -46,7 +46,7 @@ for enable remove here */
    foreground:     #FFFFFFFF;
    selected:       #FFFFFF26;
    border:         #FFFFFFFF;
-   border-radius:  12px; /* 0px normal corners */
+   border-radius:  4px; /* 0px normal corners */
 }
 
 /*****----- Main Window -----*****/
@@ -171,6 +171,8 @@ element normal.normal {
 
 element selected.normal {
     background-color:            @selected;
+    border:                      1px solid;
+    border-color:                @border;
     text-color:                  @foreground;
 }
 

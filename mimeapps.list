@@ -35,6 +35,7 @@ x-scheme-handler/mid=userapp-Thunderbird-2BR6D3.desktop
 image/x-xcursor=org.xfce.ristretto.desktop
 inner/director=thunar.desktop
 inode/directory=thunar.desktop
+application/vnd.comicbook+zip=okularApplication_ghostview.desktop
 
 [Added Associations]
 application/x-zerosize=org.xfce.mousepad.desktop;kitty.desktop;
@@ -72,3 +73,5 @@ x-scheme-handler/tg=userapp-Telegram Desktop-UN1XD3.desktop;org.telegram.desktop
 x-scheme-handler/mailto=userapp-Thunderbird-2BR6D3.desktop;
 x-scheme-handler/mid=userapp-Thunderbird-2BR6D3.desktop;
 image/x-xcursor=org.xfce.ristretto.desktop;
+text/x-bibtex=org.xfce.mousepad.desktop;
+application/vnd.comicbook+zip=okularApplication_comicbook.desktop;info.febvre.Komikku.desktop;okularApplication_ghostview.desktop;
