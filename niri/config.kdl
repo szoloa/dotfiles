@@ -152,6 +152,8 @@ window-rule {
 window-rule {
     match app-id="firefox"
     match app-id=r#"obsidian$"#
+    // match is-active=false
+    // match is-focused=false
     opacity 0.95
     default-column-width { proportion 1.0; }
 }
