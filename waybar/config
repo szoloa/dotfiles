@@ -17,8 +17,8 @@
     }
     },
     "niri/window":{
-        "format":"Soft {app_id}",
-        "format-empty":"Soft {app_id}",
+        "format":"App {app_id}",
+        "format-empty":"App {app_id}",
         "max-length": 50,
         "on-click-middle":"rofi -show drun -theme ~/.config/rofi/launchers/Launchpad-02.rasi",
         "on-click":"niri msg action maximize-column",
@@ -60,11 +60,14 @@
     "mpd":{
     	"format": "{title}",
         "on-click": "mpc toggle",
-        "on-click-middle": "kitty --class kitty-float rmpc -c ~/.config/rmpc/simple-config.ron -t ~/.config/rmpc/themes/simple.ron"
+        "on-click-middle": "kitty --class kitty-float rmpc -c ~/.config/rmpc/simple-config.ron -t ~/.config/rmpc/themes/simple.ron",
+        "max-length": 15,
+        "tooltip-format": "Now {artist} - {album} - {title} " ,
     },
     "custom/data-down":{
         "exec": "~/.config/scipts/date-countdown-waybar.sh",
         "format": "{text}",
+        "tooltip-format": "Post-graduate entrance examination: {text}",
         "interval": 600,
     },
     "custom/player-percent":{

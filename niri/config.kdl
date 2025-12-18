@@ -1,7 +1,7 @@
 prefer-no-csd
 
 input {
-    // focus-follows-mouse
+    focus-follows-mouse
     keyboard {
         xkb {
             options "caps:swapescape, altwin:swap_alt_win"
@@ -12,6 +12,7 @@ input {
     }
 
     touchpad {
+        off
         tap
    }
 
@@ -69,8 +70,8 @@ layout {
 
     default-column-width { proportion 0.5; }
     focus-ring {
-        width 2
-        active-color "#7fc8ff"
+        width 3
+        active-color "#f5bde6"
         inactive-color "#505050"
     }
 
@@ -124,9 +125,9 @@ window-rule {
 // Open the Firefox picture-in-picture player as floating by default.
 window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
-    match app-id=r#"ark$"#
-    match app-id=r#"kitty-float$"# 
-    match app-id="pavucontrol"
+    match app-id=r#"^ark"#
+    match app-id=r#"-float$"# 
+    match app-id="pavucontrol$"
     open-floating true
     opacity 0.90
     default-column-width { fixed 640; }
@@ -150,11 +151,21 @@ window-rule {
 }
 
 window-rule {
+    match app-id=r#"thunar$"# 
+    match app-id=r#"kwrite$"# 
+    opacity 0.95
+    default-column-width { proportion 0.5; }
+}
+
+window-rule {
     match app-id="firefox"
     match app-id=r#"obsidian$"#
+    match app-id=r#"code-oss$"#
+    // match app-id=r#"okular$"#
     // match is-active=false
     // match is-focused=false
-    opacity 0.95
+    // draw-border-with-background false
+    // opacity 0.95
     default-column-width { proportion 1.0; }
 }
 
@@ -180,7 +191,7 @@ binds {
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+Shift+Return hotkey-overlay-title="Open a float Terminal: kitty" { spawn-sh "kitty --app-id='kitty-float'"; }
     Alt+E hotkey-overlay-title="Open File Manager: thunar" { spawn "thunar"; }
-    Alt+D hotkey-overlay-title="Run an Application: rofi" { spawn-sh "rofi -show drun -theme ~/.config/rofi/launchers/FindApp-01.rasi"; }
+    Mod+D hotkey-overlay-title="Run an Application: rofi" { spawn-sh "rofi -show drun -theme ~/.config/rofi/launchers/FindApp-01.rasi"; }
     Mod+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
@@ -240,15 +251,15 @@ binds {
     Mod+Shift+Ctrl+L     { move-column-to-monitor-right; }
 
     Mod+Page_Down      { focus-workspace-down; }
-    Mod+D      { focus-workspace-down; }
+    // Mod+D      { focus-workspace-down; }
     Mod+Page_Up        { focus-workspace-up; }
-    Mod+A        { focus-workspace-up; }
+    // Mod+A        { focus-workspace-up; }
     Mod+U              { focus-workspace-down; }
     Mod+I              { focus-workspace-up; }
     Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
-    Mod+S { move-column-to-workspace-down; }
+    // Mod+S { move-column-to-workspace-down; }
     Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
-    Mod+W   { move-column-to-workspace-up; }
+    // Mod+W   { move-column-to-workspace-up; }
     Mod+Ctrl+U         { move-column-to-workspace-down; }
     Mod+Ctrl+I         { move-column-to-workspace-up; }
 
@@ -340,6 +351,6 @@ binds {
 
     Mod+Shift+E { quit; }
     Ctrl+Alt+Delete { quit; }
-
+    Alt+MouseLeft repeat=false { close-window; }
     // Mod+Shift+P { power-off-monitors; }
 }

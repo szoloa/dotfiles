@@ -44,8 +44,8 @@ for enable remove here */
    background:     #2A2A2AFF;
    background-alt: #222222FF;
    foreground:     #FFFFFFFF;
-   selected:       #FFFFFF26;
-   border:         #FFFFFFFF;
+   selected:       #f5bde666;
+   border:         #f5bde6e0;
    border-radius:  4px; /* 0px normal corners */
 }
 
@@ -62,7 +62,7 @@ window {
     enabled:                     true;
     margin:                      0px;
     padding:                     0px;
-    border:                      0px solid;
+    border:                      2px solid;
     border-radius:               @border-radius;
     border-color:                @border;
     background-color:            @background;
@@ -171,7 +171,7 @@ element normal.normal {
 
 element selected.normal {
     background-color:            @selected;
-    border:                      1px solid;
+    border:                      0px;
     border-color:                @border;
     text-color:                  @foreground;
 }

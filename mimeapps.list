@@ -10,7 +10,6 @@ x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop
 x-scheme-handler/about=firefox.desktop
 x-scheme-handler/unknown=firefox.desktop
-text/plain=org.xfce.mousepad.desktop
 text/csv=org.xfce.mousepad.desktop
 x-scheme-handler/discord-1216669957799018608=discord-1216669957799018608.desktop
 x-scheme-handler/chrome=firefox.desktop
@@ -36,11 +35,11 @@ image/x-xcursor=org.xfce.ristretto.desktop
 inner/director=thunar.desktop
 inode/directory=thunar.desktop
 application/vnd.comicbook+zip=okularApplication_ghostview.desktop
+text/plain=org.kde.kwrite.desktop;
 
 [Added Associations]
 application/x-zerosize=org.xfce.mousepad.desktop;kitty.desktop;
 application/zip=xarchiver.desktop;
-text/plain=snapgene-viewer.desktop;okularApplication_txt.desktop;org.xfce.mousepad.desktop;
 x-scheme-handler/http=chromium.desktop;xfce4-web-browser.desktop;com.google.Chrome.desktop;
 x-scheme-handler/https=chromium.desktop;xfce4-web-browser.desktop;com.google.Chrome.desktop;
 video/mp4=mpv.desktop;org.xfce.Parole.desktop;vlc.desktop;
@@ -75,3 +74,5 @@ x-scheme-handler/mid=userapp-Thunderbird-2BR6D3.desktop;
 image/x-xcursor=org.xfce.ristretto.desktop;
 text/x-bibtex=org.xfce.mousepad.desktop;
 application/vnd.comicbook+zip=okularApplication_comicbook.desktop;info.febvre.Komikku.desktop;okularApplication_ghostview.desktop;
+text/markdown=org.kde.kate.desktop;
+text/plain=org.kde.kwrite.desktop;
