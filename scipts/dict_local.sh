@@ -4,8 +4,9 @@
 # of dict.
 # recommand to bind with a specical key.
 # Such as: bindsym $mod+w exec "/path/to/dict.sh"
+export SDCV_PAGER="less -R"
 
-word=$(: | wmenu -p "Dict " -f "JetBrains Mono 16")
+word=$(: | wmenu -p "Dict " -f "JetBrains Mono 14")
 rtrn=$?
 [ "$rtrn" -ne 0 ] && exit $rtrn
 
@@ -13,8 +14,10 @@ if [[ $word == "" ]]; then
     word=$(wl-paste)
 fi 
 
-if [[ $(kd $word) == "Not found"* ]]; then
+trans=$(sdcv -n --color --utf8-output $word)
+
+if [[ trans == "Not found"* ]]; then
   notify-send "not found"
 else
-  kitty --class 'kitty-float' kd $word
+    kitty --app-id="kitty-float" sdcv --color --utf8-output $word
 fi

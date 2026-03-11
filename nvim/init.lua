@@ -2,7 +2,7 @@
 
 -- Options
 vim.opt.number = true
-vim.opt.relativenumber = true
+-- vim.opt.relativenumber = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
@@ -110,3 +110,48 @@ require('nvim-tree').setup()
 
 -- LSP and Autocompletion setup will be more involved and might require separate files
 -- For now, this is a good starting point.
+
+local Plug = vim.fn['plug#']
+
+-- Plugin installation
+vim.call('plug#begin')
+
+-- use a release tag to download pre-built binaries.
+-- To build from source, use { ['do'] = 'cargo build --release' } instead
+-- If you use nix, use { ['do'] = 'nix run .#build-plugin' }
+Plug('saghen/blink.cmp', { ['tag'] = 'v1.*' })
+
+-- optional: provides snippets for the snippet source
+Plug('rafamadriz/friendly-snippets')
+
+Plug('nvim-treesitter/nvim-treesitter')
+
+Plug('mason-org/mason.nvim')
+
+vim.call('plug#end')
+
+-- Plugin configuration
+require('blink.cmp').setup({
+  keymap = { preset = 'default', 
+    ['<Enter>'] = { 'select_and_accept', 'fallback' },
+  },
+  appearance = {
+    nerd_font_variant = 'mono'
+  },
+
+  completion = {
+    documentation = { auto_show = false }
+  },
+
+  sources = {
+    default = { 'lsp', 'path', 'snippets', 'buffer' },
+  },
+
+  fuzzy = {
+    implementation = "prefer_rust_with_warning"
+  }
+})
+
+require('nvim-treesitter').setup()
+-- require('nvim-treesitter').install({'rust', 'c', 'python'}):wait(30000)
+require("mason").setup()

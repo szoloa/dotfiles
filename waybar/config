@@ -1,81 +1,246 @@
+// -*- mode: jsonc -*-
 {
-    "modules-center": ["niri/workspaces"],
-    "modules-left": ["niri/window", "custom/player-percent", "mpd", "mpris", "hyprland/submap"],
-    "hyprland/window":{"format":"{title}"},
-    "modules-right": ["custom/data-down","disk", "cpu", "memory" ,"pulseaudio", "battery", "network", "clock", "tray"],
-    "hyprland/workspaces":{
-        "format":"{icon}",
-        "on-scroll-up":"hyprctl dispatch workspace e-1",
-        "on-scroll-down":"hyprctl dispatch workspace e+1"
-    },
-    "niri/workspaces":{
-        "format":"{icon}",
-        "format-icons": {
-            "active": "",
-            "urgent": "",
-            "default": ""
-    }
-    },
-    "niri/window":{
-        "format":"App {app_id}",
-        "format-empty":"App {app_id}",
-        "max-length": 50,
-        "on-click-middle":"rofi -show drun -theme ~/.config/rofi/launchers/Launchpad-02.rasi",
-        "on-click":"niri msg action maximize-column",
-        "on-click-right":"niri msg action close-window",
-    },
-    "mpris":{
-        "format":"{player} ({status})",
-    },
-    "network":{
-        "format":"Wifi",
-        "format-disconnected": "Local",
-        "on-click":"nmcli networking off",
-        "on-click-right":"nmcli networking on",
-    },
-    "cpu": {
-        "format": "CPU {usage}%"
-    },
-    "disk": {
-        "format": "Disk {specific_free:0.0f}GB", 
-        "on-click": "thunar",
-        "unit" : "GB"
-    },
-    "memory": {
-        "format": "Mem {}%"
-    },
-    "battery": {
-        "bat": "BAT0",
-        "format": "Bat {capacity}%"
-    },
-    "pulseaudio": {
-        "format": "Vol {volume}%", 
-        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-        "on-click-middle": "pavucontrol"
-    },
+    "layer": "top",
+    "position": "left",
+    //"height"
+    "margin-top": 4,
+    "margin-bottom": 4,
+    "margin-left": 4,
+    "width": 40,
+
+    "modules-left": [
+        "custom/playpause",
+        "custom/wallpaper",
+        "niri/workspaces"
+    ],
+
+    "modules-center": [
+        "niri/window"
+    ],
+
+    "modules-right": [
+        "network",
+        "group/apps",
+        "group/stats",
+        "clock",
+        "group/power",
+    ],
+
     "clock": {
-        "tooltip-format": "{:%Y-%m-%d}",
-        "on-click": "gnome-calendar",
+        // "timezone": "America/New_York",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%d\n%m\n%y}",
+        "format": "{:%H\n%M}",
+        "interval": 60
     },
-    "mpd":{
-    	"format": "{title}",
-        "on-click": "mpc toggle",
-        "on-click-middle": "kitty --class kitty-float rmpc -c ~/.config/rmpc/simple-config.ron -t ~/.config/rmpc/themes/simple.ron",
-        "max-length": 15,
-        "tooltip-format": "Now {artist} - {album} - {title} " ,
+
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}\n{icon}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": "MUT\n󰝟",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pactl set-sink-mute 0 toggle",
+        "tooltip": false,
+        "justify": "center",
+        "reverse-scrolling": true
     },
-    "custom/data-down":{
-        "exec": "~/.config/scipts/date-countdown-waybar.sh",
-        "format": "{text}",
-        "tooltip-format": "Post-graduate entrance examination: {text}",
-        "interval": 600,
+
+    "pulseaudio/slider": {
+        "min": 0,
+        "max": 100,
+        "orientation": "vertical"
     },
-    "custom/player-percent":{
-        "exec": "~/.config/scipts/player-percent.sh",
-        "format": "{text}",
-        "interval": 2,
+
+    "group/audio": {
+        "modules" : [
+            "pulseaudio",
+            "pulseaudio/slider"
+        ],
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "transition-left-to-right": true
+        }
+    },
+
+    "backlight": {
+        "format": "{percent}\n{icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "tooltip": false,
+        "justify": "center",
+        "reverse-scrolling": true
+    },
+
+    "backlight/slider": {
+        "min": 3,
+        "max": 100,
+        "orientation": "vertical",
+    },
+
+    "group/brightness": {
+        "modules" : [
+            "backlight",
+            "backlight/slider"
+        ],
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "transition-left-to-right": true
+        }
+    },
+
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}\n{icon}",
+        "format-full": "{capacity}\n{icon}",
+        "format-charging": "{capacity}\n",
+        "format-plugged": "{capacity}\n",
+        //"format-alt": "{time} {icon}",
+        "tooltip-format": "{power} W, {timeTo}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""],
+        "justify": "center"
+    },
+
+    "group/stats": {
+        "modules": [
+            "battery",
+            "group/audio",
+            "group/brightness",
+            "tray",
+        ],
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 750,
+            "transition-left-to-right": false
+        }
+    },
+    
+    "niri/window": {
+        "tooltip": false,
+        "format": "{title}",
+        "rotate": 270,
+        "rewrite": {
+            "^null$": "Desktop",
+            "": "Desktop",
+            "(.*) - Mozilla Firefox": "🌎 $1",
+            "(.*) - zsh": "> [$1]"
+        }
+    },
+
+    "custom/appmenu": {
+        "format": "󰀻",
+        "on-click": "niri msg action toggle-overview",
+        "tooltip": false
+    },
+
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "on-click-right": "close"
+    },
+
+    "group/apps": {
+        "modules" : [
+            "custom/appmenu",
+            "wlr/taskbar"
+        ],
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "transition-left-to-right": false
+        }
+    },
+
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": " ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        //"tooltip-format": "{ifname} via {gwaddr} ",
+        "tooltip-format": "{essid}: {ipaddr}",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}: {essid}",
+        "rotate": 270
+    },
+
+    "group/power": {
+        "modules": [
+            "custom/powerbutton",
+            "custom/reboot",
+            "custom/suspend",
+            "custom/lock",
+            "custom/idlekiller",
+            "user",
+        ],
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500
+        }
+    },
+
+    "custom/powerbutton": {
+        "format": "⏻",
+        "on-click": "poweroff",
+        "tooltip-format": "Power Off"
+    },
+
+    "custom/reboot": {
+        "format": "󰜉",
+        "on-click": "reboot",
+        "tooltip-format": "Reboot"
+    },
+
+    "custom/suspend": {
+        "format": "",
+        "on-click": "systemctl suspend",
+        "tooltip-format": "Suspend"
+    },
+
+    "custom/lock": {
+        "format": "󰍁",
+        "on-click": "hyprlock",
+        "tooltip-format": "Lock"
+    },
+
+    "custom/idlekiller": {
+        "format": "",
+        "on-click": "pkill hypridle || hypridle",
+        "tooltip-format": "Inhibit Idle"
+    },
+
+    "user": {
+        "format": "{work_H}:{work_M}:{work_S} ↑",
+        "interval": 60,
+        "rotate": 270,
+    },
+
+    "custom/playpause": {
+        "format": "󰐎",
         "on-click": "playerctl play-pause",
-        "on-scroll-up":"playerctl position 10-",
-        "on-scroll-down":"playerctl position 10+"
+        "tooltip": false
     },
-},
+
+    "custom/wallpaper": {
+        "format": "󰸉",
+        "on-click": "qs ipc call panelWindow toggleWallpaperSwitcher",
+        "tooltip": false
+    }
+}

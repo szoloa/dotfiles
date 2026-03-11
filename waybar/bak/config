@@ -1,0 +1,89 @@
+{
+    "modules-center": ["niri/workspaces"],
+    "modules-left": ["niri/window", "custom/player-percent", "mpd", "mpris", "hyprland/submap"],
+    "hyprland/window":{"format":"{title}"},
+    "modules-right": ["disk", "cpu", "memory" ,"pulseaudio", "battery", "network", "clock", "tray"],
+    "hyprland/workspaces":{
+        "format":"{icon}",
+        "on-scroll-up":"hyprctl dispatch workspace e-1",
+        "on-scroll-down":"hyprctl dispatch workspace e+1"
+    },
+    "niri/workspaces":{
+        "format":"{icon}",
+        "format-icons": {
+            "active": "",
+            "urgent": "",
+            "default": ""
+    }
+    },
+    "niri/window":{
+        "format":"{}",
+        "format-empty":"App {app_id}",
+        "max-length": 50,
+        "on-click-middle":"rofi -show drun -theme ~/.config/rofi/launchers/Launchpad-02.rasi",
+        "on-click":"niri msg action maximize-column",
+        "on-click-right":"niri msg action close-window",
+        "rewrite": {"dev.zed.Zed": "Zed", },
+    },
+    "mpris":{
+        "format":"{player} ({status})",
+    },
+    "network":{
+        "format":"Wifi",
+        "format-disconnected": "Local",
+        "on-click":"nmcli networking off",
+        "on-click-right":"nmcli networking on",
+    },
+    "cpu": {
+        "format": "CPU {usage}%"
+    },
+    "disk": {
+        "format": "Disk {specific_free:0.0f}GB", 
+        "on-click": "thunar",
+        "unit" : "GB"
+    },
+    "memory": {
+        "format": "Mem {}%"
+    },
+    "battery": {
+        "bat": "BAT0",
+        "format": "Bat {capacity}%"
+    },
+    "pulseaudio": {
+        "format": "Vol {volume}%", 
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-click-middle": "pavucontrol"
+    },
+    "clock": {
+        "tooltip-format": "{:%Y-%m-%d}",
+        "on-click": "gnome-calendar",
+    },
+    "mpd":{
+    	"format": "{title}",
+        "on-click": "mpc toggle",
+        "on-click-right": "mpc seek 0",
+        "on-click-middle": "kitty --class kitty-float rmpc -c ~/.config/rmpc/simple-config.ron -t ~/.config/rmpc/themes/simple.ron",
+        "max-length": 15,
+        "tooltip-format": "Now {artist} - {album} - {title} " ,
+    },
+    "custom/data-down":{
+        "exec": "~/.config/scipts/date-countdown-waybar.sh",
+        "format": "{text}",
+        "tooltip-format": "Post-graduate entrance examination: {text}",
+        "interval": 600,
+    },
+    "custom/lyrics":{
+        "exec": "lyrics",
+        "format": "{text}",
+        "tooltip-format": "Post-graduate entrance examination: {text}",
+        "interval": 1,
+    },
+    "custom/player-percent":{
+        "exec": "~/.config/scipts/player-percent.sh",
+        "format": "{text}",
+        "interval": 2,
+        "on-click": "playerctl play-pause",
+        "on-scroll-up":"playerctl position 10-",
+        "on-scroll-down":"playerctl position 10+"
+    },
+},
