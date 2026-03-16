@@ -8,7 +8,7 @@ set PATH $PATH /home/kina/.cargo/bin
 
 set -gx EDITOR nvim
 set -gx DOUBAO_API_KEY "e60fb257-eb45-4d36-8d76-1c5da3443e0d"
-set -gx OPENAI_API_KEY "sk-eyjcwlpjamrdvwpeiaszvtpvwequhsfdyisjmvnftpjbgnyd"
+set -gx OPENAI_API_KEY "d75fa1d9f0f5225c63e4854026796fb9:ZmQxMTBjNjNhMWIyNWY0NDNkODJiMjAx"
 set -gx ALIYUNPAN_CONFIG_DIR ~/.config/aliyunpan/config
 set -gx SDCV_PAGER "less -R"
 alias del='trash-put'
@@ -18,4 +18,4 @@ alias sdict='sdcv -n --color --utf8-output'
 zoxide init fish | source
 
 set D_MENU rofi -dmenu
-set -x RUSTUP_DIST_SERVER https://mirrors.tuna.tsinghua.edu.cn/rustup
+# set -x RUSTUP_DIST_SERVER https://mirrors.tuna.tsinghua.edu.cn/rustup

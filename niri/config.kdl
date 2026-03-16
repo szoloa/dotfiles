@@ -35,6 +35,12 @@ overview {
     // backdrop-color "#000000ff" 
 
 }
+// Disable the hot corners.
+gestures {
+    hot-corners {
+        off
+    }
+}
 
 xwayland-satellite {
     path "xwayland-satellite"
