@@ -10,7 +10,7 @@ window = #000000ff
 window = #000000ff
 
 [keys.gallery]
-Shift+s = exec ~/.config/scipts/wallpaper.sh "%" &
+Shift+s = exec ~/.config/scripts/wallpaper-hyprpaper.sh "%" &
 j = step_down
 h = step_left
 k = step_up

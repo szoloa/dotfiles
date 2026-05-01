@@ -1,5 +1,5 @@
 function xfg
-    set tmp (ls | fzf)
+    set tmp (find * -type f | fzf)
     if not test -z $tmp
         xdg-open $tmp
     end

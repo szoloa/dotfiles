@@ -1,0 +1,71 @@
+
+configuration {
+    modi:                       "drun";
+    show-icons:                 true;
+    drun-display-format:        "{name}";
+}
+
+* {
+   background-color:     transparent;
+}
+
+window {
+    location:                    west;
+    anchor:                      west;
+    height:                      92%;
+    width:                       95%;
+    x-offset:                    20px;
+    y-offset:                    0px;
+    margin:                      0px;
+    border:                      0px solid;
+    border-radius:               20px;
+    background-color:            #101018;
+}
+
+mainbox {
+    spacing:                     0px;
+    padding:                     10px;
+    children:                    [ "listview" ];
+}
+
+inputbar {
+    enabled: false;
+}
+
+listview {
+    columns:                     6;
+    lines:                       4;
+    fixed-height:                true;
+    cycle: true;
+    border: 0px;
+    spacing:                     0px;
+    scrollbar: false;
+}
+
+element {
+    enabled:                     true;
+    orientation: vertical;
+    padding:                     5px 5px;
+    border-radius:               10px;
+    background-color:            transparent;
+}
+
+element alternate.normal,
+element normal.normal {
+    background-color:            transparent;
+}
+
+element selected.normal {
+    border:  2px;
+    border-color: #00fffe;
+    background-color:            #122827;
+}
+
+element-icon {
+    size:                        210px;
+    horizontal-align:            0.5;
+}
+
+element-text {
+    enabled: false;
+}

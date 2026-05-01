@@ -9,7 +9,7 @@
     "width": 40,
 
     "modules-left": [
-        "custom/playpause",
+        "group/music",
         "custom/wallpaper",
         "niri/workspaces"
     ],
@@ -23,14 +23,12 @@
         "group/apps",
         "group/stats",
         "clock",
-        "group/power",
     ],
 
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%d\n%m\n%y}",
-        "format": "{:%H\n%M}",
+        "format": "{:%H\n%M\n\n%m\n%d}",
         "interval": 60
     },
 
@@ -140,7 +138,7 @@
         "rewrite": {
             "^null$": "Desktop",
             "": "Desktop",
-            "(.*) - Mozilla Firefox": "🌎 $1",
+            "(.*) — Mozilla Firefox": "🌎 $1",
             "(.*) - zsh": "> [$1]"
         }
     },
@@ -240,7 +238,28 @@
 
     "custom/wallpaper": {
         "format": "󰸉",
-        "on-click": "qs ipc call panelWindow toggleWallpaperSwitcher",
+        "on-click": "bash ~/.config/scripts/wallpaper-hyprpaper.sh",
         "tooltip": false
-    }
+    },
+    "custom/next": {
+        "format": "󰒭",
+        "on-click": "playerctl next",
+        "tooltip": false,
+    },
+    "custom/previous": {
+        "format": "󰒮",
+        "on-click": "playerctl previous",
+        "tooltip": false,
+    },
+    "group/music": {
+        "modules": [
+            "custom/playpause",
+            "custom/previous",
+            "custom/next",
+        ],
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500
+        }
+    },
 }

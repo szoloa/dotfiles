@@ -6,6 +6,12 @@ end
 set PATH $PATH /home/kina/.local/bin
 set PATH $PATH /home/kina/.cargo/bin
 
+set ARTICLE_PATH $HOME/Documents/article
+
+set DOWNLOAD_PATH $HOME/Downloads
+set WALLPAER_PATH $HOME/Pictures/Wallpapers
+set WORKSPACE_PATH $HOME/temp/workspace
+
 set -gx EDITOR nvim
 set -gx DOUBAO_API_KEY "e60fb257-eb45-4d36-8d76-1c5da3443e0d"
 set -gx OPENAI_API_KEY "d75fa1d9f0f5225c63e4854026796fb9:ZmQxMTBjNjNhMWIyNWY0NDNkODJiMjAx"
@@ -19,3 +25,4 @@ zoxide init fish | source
 
 set D_MENU rofi -dmenu
 # set -x RUSTUP_DIST_SERVER https://mirrors.tuna.tsinghua.edu.cn/rustup
+cd ~/temp/workspace/

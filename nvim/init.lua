@@ -19,6 +19,10 @@ vim.opt.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
+-- -- spell checking and auto wrap
+-- vim.opt.wrap = true 
+-- vim.opt.spell = true 
+--
 -- Keymaps
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
@@ -82,11 +86,20 @@ require('packer').startup(function(use)
   use 'hrsh7th/cmp-cmdline'
   use 'saadparwaiz1/cmp_luasnip'
   use 'L3MON4D3/LuaSnip'
-
+  use 'junegunn/fzf.vim'
+  use {
+  "startup-nvim/startup.nvim",
+  requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim", "nvim-telescope/telescope-file-browser.nvim"},
+  config = function()
+    require"startup".setup()
+  end
+}
 end)
 
 -- Colorscheme setup
 vim.cmd[[colorscheme tokyonight]]
+
+
 
 -- Lualine setup
 require('lualine').setup {
@@ -127,6 +140,13 @@ Plug('rafamadriz/friendly-snippets')
 Plug('nvim-treesitter/nvim-treesitter')
 
 Plug('mason-org/mason.nvim')
+Plug('keaising/im-select.nvim')
+Plug('junegunn/fzf.vim')
+Plug("nvim-telescope/telescope.nvim")
+Plug("nvim-lua/plenary.nvim")
+Plug("nvim-telescope/telescope-file-browser.nvim")
+
+Plug('startup-nvim/startup.nvim')
 
 vim.call('plug#end')
 
@@ -134,6 +154,7 @@ vim.call('plug#end')
 require('blink.cmp').setup({
   keymap = { preset = 'default', 
     ['<Enter>'] = { 'select_and_accept', 'fallback' },
+    -- ['<Tab>'] = { 'select_next', 'fallback' },
   },
   appearance = {
     nerd_font_variant = 'mono'
@@ -155,3 +176,36 @@ require('blink.cmp').setup({
 require('nvim-treesitter').setup()
 -- require('nvim-treesitter').install({'rust', 'c', 'python'}):wait(30000)
 require("mason").setup()
+require("im_select").setup()
+require('telescope').setup{
+  defaults = {
+    -- Default configuration for telescope goes here:
+    -- config_key = value,
+    mappings = {
+      i = {
+        -- map actions.which_key to <C-h> (default: <C-/>)
+        -- actions.which_key shows the mappings for your picker,
+        -- e.g. git_{create, delete, ...}_branch for the git_branches picker
+        ["<C-h>"] = "which_key"
+      }
+    }
+  },
+  pickers = {
+    -- Default configuration for builtin pickers goes here:
+    -- picker_name = {
+    --   picker_config_key = value,
+    --   ...
+    -- }
+    -- Now the picker_config_key will be applied every time you call this
+    -- builtin picker
+  },
+  extensions = {
+    -- Your extension configuration goes here:
+    -- extension_name = {
+    --   extension_config_key = value,
+    -- }
+    -- please take a look at the readme of the extension you want to configure
+  }
+}
+
+require("startup").setup({theme = "dashboard"}) -- put theme name here

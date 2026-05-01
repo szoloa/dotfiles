@@ -53,7 +53,7 @@ output "eDP-1" {
 }
 
 output "HDMI-A-1" {
-    mode "2560x1440@75"
+    mode "2560x1440@60"
     scale 1.5
     transform "normal"
 }
@@ -104,7 +104,7 @@ spawn-at-startup "mako"
 
 spawn-at-startup "fcitx5"
 spawn-at-startup "/usr/lib/hyprpolkitagent/hyprpolkitagent"
-spawn-sh-at-startup "swww-daemon & swww img ~/Pictures/Wallpapers/1319349-blur.jpeg"
+spawn-sh-at-startup "swww-daemon & swww img ~/Pictures/Usage/1319349-blur.jpeg"
 // spawn-sh-at-startup "swaybg -i ~/Pictures/图片/image/搜图神器_1765734988910.jpg"
 spawn-at-startup "hyprpaper"
 layer-rule {
@@ -189,6 +189,7 @@ window-rule {
     match app-id=r#"^ark"#
     match app-id=r#"-float$"# 
     match app-id="pavucontrol$"
+    match app-id="^wpp$"
     open-floating true
     opacity 0.80
     default-column-width { fixed 640; }
@@ -201,7 +202,17 @@ window-rule {
 }
 
 window-rule {
-    match app-id=r#"miniquad"#
+    match app-id="com.github.neithern.g4music"
+    draw-border-with-background false
+    default-column-width { fixed 800; }
+    default-window-height { fixed 600; }
+    opacity 0.90
+    open-floating true
+}
+
+window-rule {
+    match title="Media viewer"
+    draw-border-with-background false
     default-column-width { fixed 800; }
     default-window-height { fixed 600; }
     open-floating true
@@ -246,6 +257,25 @@ window-rule {
     default-column-width { proportion 1.0; }
 }
 
+window-rule {
+    match app-id="org.quickshell"
+    geometry-corner-radius 12
+    clip-to-geometry true
+    max-width 1980
+    max-height 1080
+    open-floating true
+}
+
+window-rule {
+    match app-id="wps"
+    match app-id="mpv"
+    match app-id="org.quickshell"
+    max-width 1980
+    max-height 1080
+    open-floating true
+
+}
+
 /-window-rule {
     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
     match app-id=r#"^org\.gnome\.World\.Secrets$"#
@@ -271,18 +301,22 @@ binds {
     Mod+Return hotkey-overlay-title="Open a lager Terminal: kitty" { spawn "kitty"; }
     Mod+E hotkey-overlay-title="Open File Manager: thunar" { spawn "thunar"; }
     Mod+D hotkey-overlay-title="Run an Application: rofi" { spawn-sh "rofi -show drun -theme ~/.config/rofi/launchers/FindApp-01.rasi"; }
+    // MouseMiddle hotkey-overlay-title="Run an Application: rofi" { spawn-sh "rofi -show drun -theme ~/.config/rofi/launchers/FindApp-01.rasi"; }
     Mod+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
-    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ && ~/.config/scipts/wp-vol.sh"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- && ~/.config/scipts/wp-vol.sh"; }
+    // ===== XF86 config ======
+
+    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ && ~/.config/scripts/wp-vol.sh"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- && ~/.config/scripts/wp-vol.sh"; }
     XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
 
     XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
     XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
 
+    // ======= windows manager =======
     Mod+O repeat=false { toggle-overview; }
     // Alt+O repeat=false { spawn-sh "rofi -show window -theme '/usr/share/rofi/themes/gruvbox-dark.rasi'"; }
     Alt+O repeat=false { spawn-sh "rofi -show window -theme ~/.config/rofi/launchers/FindApp-01.rasi"; }
@@ -334,8 +368,8 @@ binds {
     // Mod+D      { focus-workspace-down; }
     Mod+Page_Up        { focus-workspace-up; }
     // Mod+A        { focus-workspace-up; }
-    Mod+U              { focus-workspace-down; }
-    Mod+I              { focus-workspace-up; }
+    // Mod+U              { focus-workspace-down; }
+    // Mod+I              { focus-workspace-up; }
     Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
     // Mod+S { move-column-to-workspace-down; }
     Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
@@ -401,13 +435,6 @@ binds {
 
     Mod+Ctrl+C { center-visible-columns; }
 
-    Alt+W { spawn-sh "~/.config/scipts/dict_local.sh"; }
-    // Alt+W { spawn-sh "curl \"127.0.0.1:60828/selection_translate\""; }
-    Alt+M { spawn-sh "~/.config/scipts/open-bookmarks.sh"; }
-    Alt+Shift+O { spawn-sh "wl-paste | xargs xdg-open"; }
-    // Center all fully visible columns on screen.
-    Mod+C { center-column; }
-
     Mod+Minus { set-column-width "-10%"; }
     Mod+Equal { set-column-width "+10%"; }
 
@@ -419,6 +446,16 @@ binds {
     Mod+V       { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
 
+
+
+    // ======= scripts =========
+    Alt+W hotkey-overlay-title="Use kd dict" { spawn-sh "~/.config/scripts/dict_local.sh"; }
+    // Alt+W { spawn-sh "curl \"127.0.0.1:60828/selection_translate\""; }
+    Alt+M hotkey-overlay-title="Open Urls Bookmarks" { spawn-sh "~/.config/scripts/open-bookmarks.sh"; }
+    Alt+Shift+O hotkey-overlay-title="Open clipboard Url" { spawn-sh "wl-paste | xargs xdg-open"; }
+    // Center all fully visible columns on screen.
+    Mod+C { center-column; }
+    Mod+I hotkey-overlay-title="Insert sticker" { spawn-sh "~/.config/scripts/sticker.sh"; }
     // Toggle tabbed column display mode.
     // Windows in this column will appear as vertical tabs,
     // rather than stacked on top of each other.
