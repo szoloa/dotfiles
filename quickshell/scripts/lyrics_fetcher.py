@@ -28,20 +28,15 @@ HEADERS = {
 
 def safe_filename(text):
     """替换文件名中不允许的字符"""
-    return re.sub(r'[\\/*?:"<>|]', '_', text)
+    text = re.sub(r'[\\*?:"<>|]', '-', text)
+    text = re.sub(r'/', '&', text)
+    return text
 
 
 def get_lrc_path(title, artist):
     """生成 LRC 文件路径：歌曲-艺术家.lrc"""
-    filename = f"{safe_filename(title)} - {safe_filename(artist)}.lrc"
+    filename = f"{safe_filename(artist)} - {safe_filename(title)}.lrc"
     return os.path.join(LYRICS_DIR, filename)
-
-
-def get_lyrics_path(title, artist):
-    """根据歌曲信息生成持久化歌词文件路径"""
-    safe_name = f"{title}-{artist}".encode("utf-8", errors="ignore")
-    hash_str = hashlib.md5(safe_name).hexdigest()
-    return os.path.join(LYRICS_DIR, f"{hash_str}.json")
 
 def parse_lrc(lrc_text):
     """解析 LRC 文本为 [{time:秒, text:词}, ...]"""
@@ -217,16 +212,6 @@ def save_lyrics_to_lrc(lyrics, file_path):
         return True
     except Exception as e:
         print(f"保存 LRC 失败: {e}", file=sys.stderr)
-        return False
-
-def save_lyrics_to_local(lyrics, path):
-    """将歌词保存到本地文件"""
-    try:
-        with open(path, "w", encoding="utf-8") as f:
-            json.dump(lyrics, f, ensure_ascii=False, indent=2)
-        return True
-    except Exception as e:
-        print(f"保存歌词失败: {e}", file=sys.stderr)
         return False
 
 def load_lyrics_from_lrc(file_path):

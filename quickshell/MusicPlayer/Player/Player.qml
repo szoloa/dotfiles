@@ -4,7 +4,6 @@ import Qt5Compat.GraphicalEffects
 import Quickshell
 import Quickshell.Io
 import Quickshell.Services.Mpris
-import "./Services"
 
 Item {
     id: root
@@ -14,17 +13,44 @@ Item {
     readonly property color _primary: "#89b4fa"
     readonly property color _on_primary: "#1e1e2e"
 
+    readonly property list<MprisPlayer> list: Mpris.players.values
+
+    property var manualActive: null
+    readonly property MprisPlayer active: {
+        if (manualActive) return manualActive;
+        for (let i = 0; i < list.length; i++) {
+            if (list[i].isPlaying) return list[i];
+        }
+        return list.length > 0 ? list[0] : null;
+    }
     // 播放器管理
-    property var currentPlayer: MediaManager.active
+    property var currentPlayer: active
+
     readonly property bool playerValid: currentPlayer !== null && currentPlayer !== undefined
 
     // 时间单位：内部统一使用毫秒
     property double currentPos: 0
-    property double totalLength: 0
+    property double totalLength: currentPlayer ? (currentPlayer.length || 0) : 0
     property real progress: totalLength > 0 ? currentPos / totalLength : 0
     property string fontfamily: "JetBrainsMono Nerd Font"
     property bool showTranslation: true   // 默认显示翻译
-
+    
+    Connections {
+        target: Mpris.players
+        function onValuesChanged() {
+            if (root.manualActive) {
+                let stillExists = false;
+                for (let i = 0; i < Mpris.players.values.length; i++) {
+                    if (Mpris.players.values[i] === root.manualActive) {
+                        stillExists = true;
+                        break;
+                    }
+                }
+                if (!stillExists) root.manualActive = null;
+            }
+        }
+    }
+    
     Connections {
         target: MediaManager
         function onActiveChanged() {
@@ -33,18 +59,24 @@ Item {
         }
     }
 
+    Connections {
+        target: currentPlayer
+        enabled: currentPlayer !== null
+        function onMetadataChanged() {
+            updateTimeFromPlayer()
+            triggerLyricsFetch()
+        }
+    }
+
     onCurrentPlayerChanged: {
         if (currentPlayer && currentPlayer.trackTitle)
             triggerLyricsFetch()
-        if (currentPlayer) {
-            currentPlayer.metadataChanged.connect(triggerLyricsFetch)
-            updateTimeFromPlayer()
-        }
+        updateTimeFromPlayer()
     }
 
     // 媒体元数据
     property string artUrl: currentPlayer?.trackArtUrl ?? ""
-    property string title: currentPlayer?.trackTitle ?? "未播放"
+    property string title: currentPlayer?.trackTitle ?? "未知歌曲"
     property string artist: currentPlayer?.trackArtist ?? "未知艺术家"
     property string album: currentPlayer?.trackAlbum ?? ""
     property bool isPlaying: currentPlayer?.isPlaying ?? false
@@ -56,15 +88,12 @@ Item {
         updateTimeFromPlayer()
     }
 
-    // 从播放器更新总时长和当前位置（微秒转毫秒）
     function updateTimeFromPlayer() {
-        if (currentPlayer) {
-            totalLength = (currentPlayer.length || 0) 
-            currentPos = (currentPlayer.position || 0)
-        } else {
-            totalLength = 0
+        if (!currentPlayer) {
             currentPos = 0
+            return
         }
+        currentPos = (currentPlayer.position || 0)
     }
 
     // ======== 歌词处理 ========
@@ -180,7 +209,7 @@ Item {
         let seconds = Math.floor(ms)
         let m = Math.floor(seconds / 60)
         let s = seconds % 60
-        return m + ":" + (s < 10 ? "0" : "") + s
+        return m + ":" + (s < 10 ? "0" : "") + s 
     }
     property bool landscape: root.width > root.height
 
@@ -240,13 +269,13 @@ Item {
                 State {
                     name: "LYRICS_OPEN"
                     PropertyChanges { target: coverContainer; visible: landscape; width: landscape ? stage.width / 4: 0; x: 30; height: stage.height * 0.9; }
-                    PropertyChanges { target: infoContainer; opacity: 0; visible: false }
+                    PropertyChanges { target: infoContainer; width: landscape ? stage.width / 4 : 0; x: 0; y: coverContainer.y + coverContainer.width * 1.5 + 30; opacity: 1; visible: landscape; scale: 0.9; }
                     PropertyChanges { target: lyricsContainer; opacity: 1; visible: true }
                 }
             ]
             transitions: Transition {
                 ParallelAnimation {
-                    NumberAnimation { targets: [coverContainer, lyricsContainer]; properties: "x,height,width"; duration: 500; easing.type: Easing.OutExpo }
+                    NumberAnimation { targets: [infoContainer, coverContainer, lyricsContainer]; properties: "x,y,height,width,scale"; duration: 500; easing.type: Easing.OutExpo }
                     NumberAnimation { properties: "opacity"; duration: 350 }
                 }
             }
@@ -259,7 +288,7 @@ Item {
                 y: ( stage.height * 0.8 ) / 2 - ( landscape ? stage.width / 4: stage.width / 2 );
                 visible: landscape
                 Rectangle {
-                    width: parent.width; height: parent.width; radius: 8; anchors.centerIn: parent
+                    width: parent.width; height: parent.width; radius: 16; anchors.centerIn: parent
                     Image {
                         id: artImg; anchors.fill: parent; source: artUrl !== "" ? artUrl : ""
                         fillMode: Image.PreserveAspectCrop
@@ -273,31 +302,34 @@ Item {
                         visible: artUrl === ""; color: "#ffffffcc"
                     }
                 }
-            }
 
-            // 歌曲信息
-            ColumnLayout {
-                id: infoContainer
-                width: parent.width
-                y: coverContainer.y + coverContainer.height / 2 + coverContainer.width / 2 + 20
-                spacing: 4
-                Text {
-                    text: title; color: "white"; font.pixelSize: 22; font.bold: true
-                    Layout.alignment: Qt.AlignHCenter; elide: Text.ElideRight
-                    font.family: root.fontfamily
-                    Layout.maximumWidth: root.width - 100
-                }
-                Text {
-                    text: artist; color: "#ddd"; font.pixelSize: 15
-                    font.family: root.fontfamily
-                    Layout.alignment: Qt.AlignHCenter; elide: Text.ElideRight
-                }
-                Text {
-                    text: album; color: "#aaa"; font.pixelSize: 13
-                    font.family: root.fontfamily
+                // 歌曲信息
+                ColumnLayout {
+                    id: infoContainer
+                    width: root.width
+                    x: -root.width / 2.6
+                    y: coverContainer.y + coverContainer.width * 1.5 + 20 
+                    spacing: 4
+                    Text {
+                        text: title; color: "white"; font.pixelSize: 22; font.bold: true
+                        Layout.alignment: Qt.AlignHCenter; elide: Text.ElideRight
+                        font.family: root.fontfamily
+                        Layout.maximumWidth: parent.width 
+                    }
+                    Text {
+                        text: artist; color: "#ddd"; font.pixelSize: 15
+                        font.family: root.fontfamily
+                        Layout.alignment: Qt.AlignHCenter; elide: Text.ElideRight
+                        Layout.maximumWidth: parent.width 
+                    }
+                    Text {
+                        text: album; color: "#aaa"; font.pixelSize: 13
+                        font.family: root.fontfamily
 
-                    Layout.alignment: Qt.AlignHCenter; elide: Text.ElideRight
-                    visible: album !== ""
+                        Layout.alignment: Qt.AlignHCenter; elide: Text.ElideRight
+                        visible: album !== ""
+                        Layout.maximumWidth: parent.width 
+                    }
                 }
             }
 
@@ -413,6 +445,7 @@ Item {
 
                 CtrlBtn { text: "shuffle"; active: currentPlayer ? currentPlayer.shuffle : false; onTriggered: if(currentPlayer && currentPlayer.shuffleSupported) currentPlayer.shuffle = !currentPlayer.shuffle  } 
                 CtrlBtn { text: "skip_previous"; onTriggered: if (currentPlayer) currentPlayer.previous() } 
+
                 
                 Rectangle {
                     width: 60; height: 60; radius: 30; color: dynamicThemeColor 
@@ -436,14 +469,4 @@ Item {
             }
         }
     }
-
-    // 无播放器提示
-    // Rectangle {
-    //     anchors.centerIn: parent; width: 260; height: 80; radius: 20
-    //     color: "#cc1e1e2e"; visible: !playerValid; z: 20
-    //     Text {
-    //         anchors.centerIn: parent; text: "🎧 没有检测到播放器"
-    //         color: "white"; horizontalAlignment: Text.AlignHCenter; font.pixelSize: 14
-    //     }
-    // }
 }
