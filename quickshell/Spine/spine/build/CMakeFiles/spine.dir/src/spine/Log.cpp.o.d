@@ -1,0 +1,135 @@
+CMakeFiles/spine.dir/src/spine/Log.cpp.o: \
+ /home/kina/.config/quickshell/Spine/spine/src/spine/Log.cpp \
+ /usr/include/stdc-predef.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/Log.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/spine.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/Animation.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/Vector.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/Extension.h \
+ /usr/include/c++/15.2.1/stdlib.h /usr/include/c++/15.2.1/cstdlib \
+ /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
+ /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
+ /usr/include/features.h /usr/include/features-time64.h \
+ /usr/include/bits/wordsize.h /usr/include/bits/timesize.h \
+ /usr/include/sys/cdefs.h /usr/include/bits/long-double.h \
+ /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h \
+ /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/cpu_defines.h \
+ /usr/include/c++/15.2.1/pstl/pstl_config.h /usr/include/stdlib.h \
+ /usr/include/bits/libc-header-start.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stddef.h \
+ /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+ /usr/include/bits/floatn.h /usr/include/bits/floatn-common.h \
+ /usr/include/bits/types/locale_t.h /usr/include/bits/types/__locale_t.h \
+ /usr/include/sys/types.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/bits/time64.h \
+ /usr/include/bits/types/clock_t.h /usr/include/bits/types/clockid_t.h \
+ /usr/include/bits/types/time_t.h /usr/include/bits/types/timer_t.h \
+ /usr/include/bits/stdint-intn.h /usr/include/endian.h \
+ /usr/include/bits/endian.h /usr/include/bits/endianness.h \
+ /usr/include/bits/byteswap.h /usr/include/bits/uintn-identity.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/types/sigset_t.h /usr/include/bits/types/__sigset_t.h \
+ /usr/include/bits/types/struct_timeval.h \
+ /usr/include/bits/types/struct_timespec.h \
+ /usr/include/bits/pthreadtypes.h /usr/include/bits/thread-shared-types.h \
+ /usr/include/bits/pthreadtypes-arch.h \
+ /usr/include/bits/atomic_wide_counter.h /usr/include/bits/struct_mutex.h \
+ /usr/include/bits/struct_rwlock.h /usr/include/alloca.h \
+ /usr/include/bits/stdlib-float.h /usr/include/c++/15.2.1/bits/std_abs.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/dll.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/SpineObject.h \
+ /usr/include/c++/15.2.1/new /usr/include/c++/15.2.1/bits/exception.h \
+ /usr/include/c++/15.2.1/bits/version.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/SpineString.h \
+ /usr/include/string.h /usr/include/strings.h /usr/include/stdio.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdarg.h \
+ /usr/include/bits/types/__fpos_t.h /usr/include/bits/types/__mbstate_t.h \
+ /usr/include/bits/types/__fpos64_t.h /usr/include/bits/types/__FILE.h \
+ /usr/include/bits/types/FILE.h /usr/include/bits/types/struct_FILE.h \
+ /usr/include/bits/types/cookie_io_functions_t.h \
+ /usr/include/bits/stdio_lim.h /usr/include/assert.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/HashMap.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/MixBlend.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/MixDirection.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/Property.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/AnimationState.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/Pool.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/ContainerUtil.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/HasRendererObject.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/Slot.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/Color.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/MathUtil.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/AnimationStateData.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/Atlas.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/TextureRegion.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/AtlasAttachmentLoader.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/AttachmentLoader.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/RTTI.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/Attachment.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/AttachmentTimeline.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/Timeline.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/AttachmentType.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/BlendMode.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/Bone.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/Updatable.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/Physics.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/Inherit.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/BoneData.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/BoundingBoxAttachment.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/VertexAttachment.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/ClippingAttachment.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/ColorTimeline.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/CurveTimeline.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/ConstraintData.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/DeformTimeline.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/DrawOrderTimeline.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/Event.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/EventData.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/EventTimeline.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/IkConstraint.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/IkConstraintData.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/IkConstraintTimeline.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/InheritTimeline.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/Json.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/LinkedMesh.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/MeshAttachment.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/TextureRegion.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/Sequence.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/PathAttachment.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/PathConstraint.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/PathConstraintData.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/PositionMode.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/SpacingMode.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/RotateMode.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/PathConstraintMixTimeline.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/PathConstraintPositionTimeline.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/PathConstraintSpacingTimeline.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/PhysicsConstraint.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/PhysicsConstraintData.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/PointAttachment.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/RegionAttachment.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/RotateTimeline.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/ScaleTimeline.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/TranslateTimeline.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/ShearTimeline.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/Skeleton.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/SkeletonBinary.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/SkeletonBounds.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/SkeletonClipping.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/Triangulator.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/SkeletonData.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/SkeletonJson.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/SkeletonRenderer.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/BlockAllocator.h \
+ /usr/include/c++/15.2.1/cstdint \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h \
+ /usr/include/bits/stdint-uintn.h /usr/include/bits/stdint-least.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/Skin.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/Slot.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/SlotData.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/TextureLoader.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/TransformConstraint.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/TransformConstraintData.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/TransformConstraintTimeline.h \
+ /home/kina/.config/quickshell/Spine/spine/include/spine/Vertices.h

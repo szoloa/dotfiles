@@ -238,7 +238,7 @@
 
     "custom/wallpaper": {
         "format": "󰸉",
-        "on-click": "bash ~/.config/scripts/wallpaper-hyprpaper.sh",
+        "on-click": "bash ~/.config/scripts/wallpaper-awww.sh",
         "tooltip": false
     },
     "custom/next": {

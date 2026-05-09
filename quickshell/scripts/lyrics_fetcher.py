@@ -231,6 +231,24 @@ def load_lyrics_from_local(path):
     except Exception:
         return None
 
+def merge_duplicate_time(lyrics):
+    """合并相同时间的行，用换行连接文本"""
+    merged = []
+    i = 0
+    while i < len(lyrics):
+        current = lyrics[i]
+        j = i + 1
+        texts = [current["text"]]
+        while j < len(lyrics) and abs(lyrics[j]["time"] - current["time"]) < 0.01:
+            texts.append(lyrics[j]["text"])
+            j += 1
+        merged.append({
+            "time": current["time"],
+            "text": "\n".join(texts)
+        })
+        i = j
+    return merged
+
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print(json.dumps([{"time": 0, "text": "等待播放..."}]))
@@ -241,6 +259,7 @@ if __name__ == "__main__":
     lyrics_path = get_lrc_path(title, artist)
     lyrics = load_lyrics_from_lrc(lyrics_path)
     if lyrics:
+        lyrics = merge_duplicate_time(lyrics) 
         print(json.dumps(lyrics))
         sys.exit(0)
 

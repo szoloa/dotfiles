@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/kina/.config/quickshell/Spine/spine/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

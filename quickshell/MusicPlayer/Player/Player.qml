@@ -32,7 +32,7 @@ Item {
     property double currentPos: 0
     property double totalLength: currentPlayer ? (currentPlayer.length || 0) : 0
     property real progress: totalLength > 0 ? currentPos / totalLength : 0
-    property string fontfamily: "JetBrainsMono Nerd Font"
+    property string fontfamily: "Dejavu Sans"
     property bool showTranslation: true   // 默认显示翻译
     
     Connections {
@@ -52,9 +52,9 @@ Item {
     }
     
     Connections {
-        target: MediaManager
+        target: MprisPlayer
         function onActiveChanged() {
-            currentPlayer = MediaManager.active
+            currentPlayer = MprisPlayer.active
             updateTimeFromPlayer()
         }
     }
@@ -80,11 +80,11 @@ Item {
     property string artist: currentPlayer?.trackArtist ?? "未知艺术家"
     property string album: currentPlayer?.trackAlbum ?? ""
     property bool isPlaying: currentPlayer?.isPlaying ?? false
-    property bool showLyrics: false
+    property bool showLyrics: true
 
     Component.onCompleted: {
-        if (!currentPlayer && MediaManager.active)
-            currentPlayer = MediaManager.active
+        if (!currentPlayer && MprisPlayer.active)
+            currentPlayer = MprisPlayer.active
         updateTimeFromPlayer()
     }
 
@@ -228,7 +228,7 @@ Item {
         }
 
         Image { id: bgSource; source: artUrl; anchors.fill: parent; fillMode: Image.PreserveAspectCrop; visible: false }
-        FastBlur { anchors.fill: parent; source: bgSource; radius: 32; visible: artUrl !== "" }
+        FastBlur { anchors.fill: parent; source: bgSource; radius: 64; visible: artUrl !== "" }
         Rectangle { anchors.fill: parent; color: Qt.rgba(0, 0, 0, 0.6) }
 
         // 歌词切换按钮
@@ -268,8 +268,8 @@ Item {
                 },
                 State {
                     name: "LYRICS_OPEN"
-                    PropertyChanges { target: coverContainer; visible: landscape; width: landscape ? stage.width / 4: 0; x: 30; height: stage.height * 0.9; }
-                    PropertyChanges { target: infoContainer; width: landscape ? stage.width / 4 : 0; x: 0; y: coverContainer.y + coverContainer.width * 1.5 + 30; opacity: 1; visible: landscape; scale: 0.9; }
+                    PropertyChanges { target: coverContainer; visible: landscape; width: landscape ? stage.width / 4: 0; x: stage.width * 0.05;  }
+                    PropertyChanges { target: infoContainer; width: landscape ? stage.width / 4 : 0; x: 0; opacity: 1; visible: landscape; scale: 0.9; }
                     PropertyChanges { target: lyricsContainer; opacity: 1; visible: true }
                 }
             ]
@@ -284,8 +284,8 @@ Item {
             Item {
                 id: coverContainer
                 width: landscape ? stage.width / 4: stage.width / 2; 
-                height: stage.height * 0.8; 
-                y: ( stage.height * 0.8 ) / 2 - ( landscape ? stage.width / 4: stage.width / 2 );
+                height: stage.height; 
+                // y: ( stage.height ) / 2 - ( landscape ? stage.width / 4: stage.width / 2 );
                 visible: landscape
                 Rectangle {
                     width: parent.width; height: parent.width; radius: 16; anchors.centerIn: parent
@@ -306,9 +306,9 @@ Item {
                 // 歌曲信息
                 ColumnLayout {
                     id: infoContainer
-                    width: root.width
-                    x: -root.width / 2.6
-                    y: coverContainer.y + coverContainer.width * 1.5 + 20 
+                    width: stage.width
+                    x: -parent.x
+                    y: coverContainer.height * 0.5 + coverContainer.width * 0.5 + 10
                     spacing: 4
                     Text {
                         text: title; color: "white"; font.pixelSize: 22; font.bold: true
@@ -342,6 +342,7 @@ Item {
                 y: 0
                 opacity: 0; 
                 visible: false
+                
                 ListView {
                     id: lyricsList
                     anchors.fill: parent
@@ -354,17 +355,66 @@ Item {
                     highlightRangeMode: ListView.StrictlyEnforceRange
                     interactive: true
                     highlightMoveDuration: 400
-                    delegate: Text {
-                        text: model.text
-                        font.family: root.fontfamily
-                        color: ListView.isCurrentItem ? dynamicThemeColor : "#ccffffff"
-                        font.pixelSize: ListView.isCurrentItem ? 19 : 16
-                        font.weight: ListView.isCurrentItem ? Font.DemiBold : Font.Normal
-                        opacity: ListView.isCurrentItem ? 1.0 : 0.7
-                        horizontalAlignment: Text.AlignLeft
-                        wrapMode: Text.WordWrap
-                        Behavior on font.pixelSize { NumberAnimation { duration: 250 } }
-                        Behavior on opacity { NumberAnimation { duration: 250 } }
+                    flickDeceleration: 2000          // 减慢滑动减速，更跟手
+                    maximumFlickVelocity: 4000           // 限制最大速度，避免飞过头
+                    boundsBehavior: Flickable.StopAtBounds  // 避免橡皮筋效果引起生硬回弹
+                    verticalLayoutDirection: ListView.TopToBottom
+                    
+                    highlightResizeDuration: 0
+                    delegate: Item {
+                        width: ListView.view.width
+                        height: column.implicitHeight   // 适当增加上下内边距
+                        readonly property bool isCurr: lyricsList.currentIndex === index
+                        Column {
+                            id: column
+                            width: parent.width
+                            spacing: 4
+                            // 原文（可能没有翻译时只有这一条）
+                            Text {
+                                width: parent.width
+                                text: {
+                                    // 如果包含换行符，取第一部分；否则取全部
+                                    var parts = model.text.split('\n');
+                                    return parts[0];
+                                }
+                                font.family: root.fontfamily
+                                color: isCurr ? dynamicThemeColor : "#ccffffff"
+                                font.bold: true
+                                // color: "white"
+                                font.pixelSize: 20
+                                font.weight: isCurr ? Font.DemiBold : Font.Normal
+                                opacity: isCurr ? 1.0 : 0.5
+                                scale: isCurr ? 1.1 : 1.0
+                                wrapMode: Text.WordWrap
+                                horizontalAlignment: Text.AlignHCenter
+                                Behavior on scale { NumberAnimation { duration: 500; easing.type: Easing.OutQuart } }
+                                Behavior on opacity { NumberAnimation {  duration: 500; easing.type: Easing.OutQuart } }
+                                Behavior on color { ColorAnimation { duration: 500; easing.type: Easing.OutQuart } }
+                            }
+
+                            // 译文（只有当存在换行且第二段不为空时才显示）
+                            Text {
+                                width: parent.width
+                                text: {
+                                    var parts = model.text.split('\n');
+                                    return parts.length > 1 ? parts[1] : "";
+                                }
+                                visible: text !== ""
+                                font.family: root.fontfamily
+                                color: isCurr ? dynamicThemeColor : "#ccffffff"
+                                // color: "white"
+                                font.bold: true
+                                font.pixelSize: 20
+                                font.weight: Font.Normal
+                                scale: isCurr ? 1.1 : 1.0
+                                opacity: isCurr ? 0.9 : 0.5
+                                wrapMode: Text.WordWrap
+                                horizontalAlignment: Text.AlignHCenter
+                                Behavior on scale { NumberAnimation { duration: 500; easing.type: Easing.OutQuart } }
+                                Behavior on opacity { NumberAnimation {  duration: 500; easing.type: Easing.OutQuart } }
+                                Behavior on color { ColorAnimation { duration: 500; easing.type: Easing.OutQuart } }
+                            }
+                        }
                     }
                 }
                 layer.enabled: true

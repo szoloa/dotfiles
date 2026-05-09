@@ -351,7 +351,7 @@ Item {
                         opacity: ListView.isCurrentItem ? 1.0 : 0.5
                         transformOrigin: Item.Left
                         scale: ListView.isCurrentItem ? 1.25 : 1.0
-                        horizontalAlignment: Text.AlignLeft
+                        horizontalAlignment: Text.AlignRight
                         wrapMode: Text.WordWrap
                         
                         Behavior on scale { NumberAnimation { duration: 500; easing.type: Easing.OutQuart } }

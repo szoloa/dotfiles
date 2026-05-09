@@ -1,0 +1,5 @@
+/home/kina/.config/quickshell/Spine/spine/build/CMakeFiles/spine.dir
+/home/kina/.config/quickshell/Spine/spine/build/CMakeFiles/edit_cache.dir
+/home/kina/.config/quickshell/Spine/spine/build/CMakeFiles/rebuild_cache.dir
+/home/kina/.config/quickshell/Spine/spine/build/CMakeFiles/spine_autogen_timestamp_deps.dir
+/home/kina/.config/quickshell/Spine/spine/build/CMakeFiles/spine_autogen.dir

@@ -106,7 +106,11 @@ spawn-at-startup "fcitx5"
 spawn-at-startup "/usr/lib/hyprpolkitagent/hyprpolkitagent"
 spawn-sh-at-startup "swww-daemon & swww img ~/Pictures/Usage/1319349-blur.jpeg"
 // spawn-sh-at-startup "swaybg -i ~/Pictures/图片/image/搜图神器_1765734988910.jpg"
-spawn-at-startup "hyprpaper"
+// spawn-at-startup "hyprpaper"
+spawn-at-startup "awww-daemon"
+
+spawn-sh-at-startup "rm -f $XDG_RUNTIME_DIR/wob.sock && mkfifo $XDG_RUNTIME_DIR/wob.sock && tail -f $XDG_RUNTIME_DIR/wob.sock | wob"
+
 layer-rule {
     match namespace="^swww-daemon$"
     place-within-backdrop true
@@ -259,8 +263,8 @@ window-rule {
 
 window-rule {
     match app-id="org.quickshell"
-    geometry-corner-radius 12
-    clip-to-geometry true
+    // geometry-corner-radius 12
+    // clip-to-geometry true
     max-width 1980
     max-height 1080
     open-floating true
@@ -308,9 +312,11 @@ binds {
 
     // ===== XF86 config ======
 
-    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ && ~/.config/scripts/wp-vol.sh"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- && ~/.config/scripts/wp-vol.sh"; }
-    XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ && pamixer --get-volume > $XDG_RUNTIME_DIR/wob.sock"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- && pamixer --get-volume > $XDG_RUNTIME_DIR/wob.sock"; }
+
+    XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && ( [ \"$(pamixer --get-mute)\" = \"true\" ] && echo 0 > $XDG_RUNTIME_DIR/wob.sock ) || pamixer --get-volume > $XDG_RUNTIME_DIR/wob.sock" ; }
+
     XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
 
     XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
