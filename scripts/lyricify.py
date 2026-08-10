@@ -17,6 +17,7 @@ def get_current_track():
 def get_synced_lyrics(artist, title):
     query = f"{artist} {title}"
     url = f"https://lrclib.net/api/search?q={requests.utils.quote(query)}"
+    print(url)
     try:
         response = requests.get(url, timeout=5)
         data = response.json()
@@ -135,4 +136,4 @@ def main():
         print("Exited synced lyrics display.")
 
 if __name__ == "__main__":
-    main()
+    get_synced_lyrics('LONGMAN', 'spiral')

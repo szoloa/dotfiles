@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/">
+    <file alias="/SpineQml">/home/kina/.config/quickshell/Spine/build</file>
+
+  </qresource>
+</RCC>

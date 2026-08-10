@@ -1,338 +1,170 @@
-@define-color gruv-blue         rgba(69, 133, 136, 0.9);
-@define-color gruv-green        rgba(104, 157, 106, 0.9);
-@define-color gruv-magenta      rgba(177, 98, 134, 0.9);
-@define-color gruv-red          rgba(204, 36, 29, 0.9);
-@define-color gruv-orange       rgba(214, 93, 14, 0.9);
-@define-color gruv-yellow       rgba(215, 153, 33, 0.9);
-@define-color gruv-lime         rgba(184, 187, 38, 0.9);
-@define-color gruv-beige        rgba(235, 219, 178, 0.9);
-@define-color gruv-grey         rgba(168, 153, 132, 0.9);
 
-@define-color background-blue   rgba(13, 17, 23, 0.9);
-@define-color text-white        rgba(255, 255, 255, 0.95);
+/* 
+  bg - background
+  fg - foreground
+  br - border
+*/
 
-@define-color hover-black       rgba(0, 0, 0, 0.6);
-@define-color mute-black        rgba(0, 0, 0, 0.8);
+/* Main Colors */
+
+@define-color main-fg         #cdd7f4;
+@define-color main-bg         rgba(24, 15, 11, 0.90);
+/* #11111b; */
+@define-color main-br         #cdd6f4;
+
+@define-color active-bg       #9399b2;
+@define-color active-fg       #11111b;
+
+@define-color hover-bg        #313244;
+@define-color hover-fg        rgba(205, 214, 244, 0.75);
+
+@define-color white           #ffffff;
+@define-color black           #000000;
+
+/* Module Colors */
+
+@define-color module-fg       #f5e0dc;
+@define-color workspaces      #181825;
+
+/* State Colors */
 
 * {
-    font-family: 'Dejavu Sans Mono Nerd Font';
-    font-size: 13px;
-    /*border-radius: 0px;*/
-    transition: 0.5s ease-out;
+  font-family: "JetBrainsMono Nerd Font", "Kingnam Maiyuan", "Font Awesome 7 Free";
+  font-weight: bold;
+  font-size: 14px;
+  min-height: 0;
+  padding: 0;
+  border: none;
+  margin: 1px;
+  border-radius: 0px;
 }
+
+/* === Main Background === */
 
 window#waybar {
-    background-color: @background-blue;
-    color: @text-white;
-    transition-property: background-color;
-    transition: 1s ease-in-out;
-    border-radius: 0px 5px 5px 0px;
+  /*background: @main-bg;*/
+    background: rgba(0,0,0,0.8);
 }
 
-window#waybar.empty {
-    /*opacity: 0.0;*/
-    background-color: @hover-black;
-    transition-duration: 0.5s;
-    border-radius: 0px 0px 0px 0px;
+tooltip {
+  background: @main-bg;
+  border: solid;
+  border-width: 1.5px;
+  border-radius: 2px;
+  border-color: @main-br;
+}
+tooltip label {
+  color: @main-fg;
+  font-weight: normal;
+  margin: -1.5px 3px;
 }
 
-button {
-    border: none;
-    border-radius: 0;
+.modules-left,
+.modules-right,
+.modules-center {
+  border-radius: 18px;
+  padding: 0 6px;
+  background: #181926;
 }
 
-button:hover {
-    background: inherit;
-    box-shadow: inset 2px 0px @gruv-beige;
-}
-
-#custom-powerbutton,
-#custom-reboot,
-#custom-suspend,
-#custom-lock,
-#custom-idlekiller,
-#custom-playpause,
-#custom-next,
-#custom-previous,
-#custom-wallpaper,
-#user,
-button,
-#window, 
-#network,
-#custom-appmenu,
-#backlight,
-#backlight-slider,
-#pulseaudio,
-#pulseaudio-slider,
-#battery,
-#clock { 
-    padding: 10px 0px;
-    color: @text-white;
-    background: transparent;
-}
-
-#window {
-    margin: 20px 0px;
-}
-
-window#waybar.empty #window {
-    opacity: 0;
-}
-
-#clock {
-    box-shadow: inset 2px 0 @gruv-blue;
-}
-
-#clock:hover {
-    color: @gruv-blue;
-    background-color: @hover-black;
-}
-
-window#waybar.empty #clock {
-    border-radius: 0 0 20px 0;
-}
-
-#pulseaudio,
-#pulseaudio-slider {
-    box-shadow: inset 2px 0px @gruv-magenta;
-}
-
-#pulseaudio.muted:hover,
-#pulseaudio:hover {
-    color: @gruv-magenta;
-    transition-duration: .5s;
-    background-color: @hover-black;
-}
-
-#pulseaudio.muted {
-    background-color: @mute-black;
-    color: @text-white;
-}
-
-#pulseaudio-slider slider {
-    min-height: 0px;
-    min-width: 0px;
-    opacity: 0;
-    background-image: none;
-    border: none;
-    box-shadow: none;
-}
-
-#pulseaudio-slider trough {
-    min-height: 60px;
-    min-width: 10px;
-    border-radius: 5px;
-    background: @hover-black;
-}
-
-#pulseaudio-slider highlight {
-    min-width: 10px;
-    border-radius: 5px;
-    background: @text-white;
-}
-
-#pulseaudio-slider:hover highlight {
-    background: @gruv-magenta;
-}
-
-#backlight:hover {
-    color: @gruv-orange;
-    background-color: @hover-black;
-}
-
-#backlight,
-#backlight-slider {
-    box-shadow: inset 2px 0px @gruv-orange;
-}
-
-#backlight-slider slider {
-    min-height: 0px;
-    min-width: 0px;
-    opacity: 0;
-    background-image: none;
-    border: none;
-    box-shadow: none;
-}
-
-#backlight-slider trough {
-    min-height: 60px;
-    min-width: 10px;
-    border-radius: 5px;
-    background-color: @hover-black;
-}
-
-#backlight-slider highlight {
-    min-width: 10px;
-    border-radius: 5px;
-    background-color: @text-white;
-}
-
-#backlight-slider:hover highlight {
-    background: @gruv-orange;
-}
-
-#battery:hover, 
-#battery.charging:hover, 
-#battery.plugged:hover {
-    color: @gruv-green;
-    transition-duration: .5s;
-    background-color: @hover-black;
-}
-
-#battery,
-#battery.charging,
-#battery.plugged {
-    box-shadow: inset 2px 0px @gruv-green;
-}
-
-#window:hover {
-    color: @gruv-orange;
-    background-color: @hover-black;
-}
-
-#window {
-    box-shadow: inset 2px 0px @gruv-orange;
-}
-
-#taskbar button {
-    padding: 5px 0;
-}
-
-#taskbar button.active {
-    background: @mute-black;
-    box-shadow: inset 2px 0px @gruv-lime;
-}
-
-#custom-appmenu:hover {
-    color: @gruv-yellow;
-    background-color: @hover-black;
-}
-
-#custom-appmenu {
-    box-shadow: inset 2px 0px @gruv-yellow;
-}
-
-#custom-powerbutton:hover {
-    color: @gruv-red;
-    background-color: @hover-black;
-}
-
-#custom-powerbutton {
-    box-shadow: inset 2px 0px @gruv-red;
-}
-
-window#waybar.empty #custom-powerbutton {
-    border-radius: 0 20px 0 0;
-}
-
-#custom-reboot:hover {
-    color: @gruv-yellow;
-    background-color: @hover-black;
-}
-
-#custom-reboot {
-    box-shadow: inset 2px 0px @gruv-yellow;
-}
-
-#custom-suspend:hover {
-    color: @gruv-grey;
-    background-color: @hover-black;
-}
-
-#custom-suspend {
-    box-shadow: inset 2px 0px @gruv-grey;
-}
-
-#custom-lock:hover {
-    color: @gruv-blue;
-    background-color: @hover-black;
-}
-
-#custom-lock {
-    box-shadow: inset 2px 0px @gruv-blue;
-}
-
-#custom-idlekiller:hover {
-    color: @gruv-magenta;
-    background-color: @hover-black;
-}
-
-#custom-idlekiller {
-    box-shadow: inset 2px 0px @gruv-magenta;
-}
-
-#user:hover {
-    color: @gruv-green;
-    background-color: @hover-black;
-}
-
-#user {
-    box-shadow: inset 2px 0px @gruv-green;
-}
-
-#taskbar,
 #workspaces {
-    background: transparent;
-    border-radius: 0px;
-    margin: 10px 0px;
+  padding: 0 20px;
+  border-radius: 2px;
 }
 
 #workspaces button {
-    padding: 7px 0px;
-    background-color: transparent;
-    color: @text-white;
-    border-radius: 0px;
-    transition: 0.2s ease-in-out;
-    font-size: 15px;
-}
-
-#workspaces button.active {
-    background-color: @mute-black;
-    border-radius: 0px;
-    font-weight: 900;
-}
-
-#workspaces button.active:hover {
-    color: @gruv-lime;
+  color: #5b6078;
+  background: none;
+  border-radius: 0;
+  padding: 0 0px;
 }
 
 #workspaces button:hover {
-    background: @hover-black;
+  color: #a6da95;
+}
+#workspaces button.active {
+  color: #f5bde6;
 }
 
-#workspaces button.focused {
-    background-color: rgba(0, 0, 0, 0.3);
-    box-shadow: inset 2px 0px @gruv-lime;
+#submap {
+  background-color: #982014;
+  border-radius: 2px;
 }
 
-#workspaces button.urgent {
-    background-color: @gruv-red;
-    border-radius: 10px;
+#cpu,
+#mpd,
+#custom-gpu,
+#custom-spotify,
+#custom-player-percent,
+#custom-data-down,
+#workspaces,
+#window,
+#memory,
+#submap,
+#clock,
+#bluetooth,
+#pulseaudio,
+#disk,
+#mpris,
+#network,
+#battery {
+  opacity: 1;
+  color: @module-fg;
+  margin-bottom: 0;
+  border-radius: 2px;
+  padding: 0 4px;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0);
 }
 
-#custom-playpause:hover {
-    color: @gruv-yellow;
-    background-color: @hover-black;
+#workspaces {
+  background: @workspaces;
 }
 
-#custom-playpause {
-    box-shadow: inset 2px 0px @gruv-yellow;
+#clock.time {
+  background: @time;
 }
 
-#network.disconnected {
-    background-color: @gruv-red;
+#clock.date {
+  background: @date;
 }
 
-#custom-wallpaper:hover {
-    color: @gruv-blue;
-    background-color: @hover-black;
+#bluetooth {
+  padding-right: 5px;
+  background: @tray;
 }
 
-#custom-wallpaper {
-    box-shadow: inset 2px 0px @gruv-blue;
+#bluetooth:hover {
+  color: @hover-fg;
+  text-shadow: none;
+  box-shadow: none;
 }
 
-#tray { 
-    box-shadow: inset 2px 0px @gruv-lime;
+#tray {
+  background-color: rgba(30, 31, 41, 0.8);  /* 半透明深色背景 */
+  border-radius: 2px;                      /* 圆角大小 */
+  padding: 0 12px;                          /* 左右内边距 */
+  margin: 0px 10px 0px 0px;                          /* 外边距 */
 }
 
+#tray > .passive {
+  -gtk-icon-effect: dim;                    /* 非活动图标变暗 */
+  margin: 0 20px;                            /* 图标间距 */
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;              /* 需要关注的图标高亮 */
+  animation: pulse 2s infinite;
+}
+
+#network.disconnected,
+#pulseaudio.muted {
+    color: #aa101a;
+}
+
+#battery.charging {
+    color: #00EE00;
+}
+
+window#waybar.empty #window{
+  background-color: rgba(0,0,0,0);
+}

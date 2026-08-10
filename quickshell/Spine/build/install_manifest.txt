@@ -1,0 +1,4 @@
+/usr/lib/qt6/qml/SpineQml/qmldir
+/usr/lib/qt6/qml/SpineQml/libSpineQmlModule.so
+/usr/lib/qt6/qml/SpineQml/libSpineQmlModuleplugin.so
+/usr/lib/qt6/qml/SpineQml/SpineQmlModule.qmltypes

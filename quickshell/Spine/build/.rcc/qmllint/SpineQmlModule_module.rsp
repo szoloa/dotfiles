@@ -1,0 +1,12 @@
+-I
+/home/kina/.config/quickshell/Spine/build
+-I
+/home/kina/.config/quickshell/Spine/build
+-I
+/usr/lib/qt6/qml
+--resource
+/home/kina/.config/quickshell/Spine/build/.qt/rcc/qmake_SpineQml.qrc
+--resource
+/home/kina/.config/quickshell/Spine/build/.qt/rcc/SpineQmlModule_raw_qml_0.qrc
+--module
+SpineQml

@@ -10,16 +10,16 @@
 set $mod Mod4
 # Home row direction keys, like vim
 
-font pango:JetBrainsMono Font 11
+font pangp:JetBrainsMono Font, Noto Sans CJK SC 10
 
 set $left h
 set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term alacritty
+set $term foot
 # Your preferred application launcher
-set $menu wmenu-run -N "#000000" -n "#ffffff" -M "#458588" -m "#282828" -f "10" # wofi --show drun
+set $menu wmenu-run -N "#000000" -n "#ffffff" -M "#458588" -m "#282828" -f "10" -l 3 # wofi --show drun
 
 set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
 
@@ -30,7 +30,7 @@ seat seat0 {
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/Pictures/Wallpapers/wallhaven-zpy5zo.png fill
+output * bg ~/Pictures/Wallpapers/wallhaven/wallhaven-3q5k8y.png fill
 
 default_border pixel 1
 gaps inner 0
@@ -60,12 +60,12 @@ gaps outer 0
 #
 # Example configuration:
 #
-#   input type:touchpad {
-#       dwt enabled
-#       tap enabled
-#       natural_scroll enabled
-#       middle_emulation enabled
-#   }
+input type:touchpad {
+    dwt enabled
+    tap enabled
+    natural_scroll disabled
+    middle_emulation enabled
+}
 #
 input type:keyboard {
 	xkb_layout "eu"
@@ -81,6 +81,7 @@ input type:keyboard {
 #
     # Start a terminal
     bindsym $mod+Return exec $term
+    bindsym $mod+Shift+Return exec $term --app-id "termial-float"
 
     # Kill focused window
     bindsym $mod+q kill
@@ -208,11 +209,36 @@ mode "resize" {
     bindsym Up resize shrink height 10px
     bindsym Right resize grow width 10px
 
+    bindsym Shift+$left move left 10px
+    bindsym Shift+$down move down 10px
+    bindsym Shift+$up move up 10px
+    bindsym Shift+$right move right 10px
+
+    # Ditto, with arrow keys
+    bindsym Shift+Left move left 10px
+    bindsym Shift+Down move down 10px
+    bindsym Shift+Up move up 10px
+    bindsym Shift+Right move right 10px
+
+
     # Return to default mode
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+
+set $menu "[M] boobmark [E] Thunar"
+
+mode $menu {
+	bindsym M exec ~/.config/scripts/open-bookmarks.sh, mode "default"
+	bindsym E exec thunar, mode "default"
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+m mode $menu
+
 #
 # Utilities:
 #
@@ -233,7 +259,7 @@ bindsym $mod+r mode "resize"
 # Read `man 5 sway-bar` for more information about this section.
 bar {
     position bottom
-    tray_output *
+    tray_output eDP-1
     font pango:DejaVu Sans Mono 10
     separator_symbol "|"
 
@@ -248,6 +274,8 @@ bar {
         active_workspace #ffffffff #000000ff #5c5c5c
     }
 }
+
+for_window [app_id="-float$"] floating enable
 
 exec --no-startup-id mako
 exec --no-startup-id fcitx5

@@ -1,0 +1,2 @@
+/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include/../YEVBIBVP2B/moc_filewatcher.cpp.json
+/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include/../YEVBIBVP2B/moc_spineitem.cpp.json

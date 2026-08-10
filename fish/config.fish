@@ -26,3 +26,4 @@ zoxide init fish | source
 
 set D_MENU rofi -dmenu
 # set -x RUSTUP_DIST_SERVER https://mirrors.tuna.tsinghua.edu.cn/rustup
+

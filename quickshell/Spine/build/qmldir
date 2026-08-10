@@ -1,0 +1,8 @@
+module SpineQml
+linktarget SpineQmlModuleplugin
+plugin SpineQmlModuleplugin
+classname SpineQmlPlugin
+typeinfo SpineQmlModule.qmltypes
+prefer :/SpineQml/
+depends QtQuick
+

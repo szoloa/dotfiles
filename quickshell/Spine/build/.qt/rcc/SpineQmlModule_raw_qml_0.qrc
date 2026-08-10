@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/SpineQml/">
+    <file alias="shell.qml">/home/kina/.config/quickshell/Spine/shell.qml</file>
+  </qresource>
+</RCC>
+

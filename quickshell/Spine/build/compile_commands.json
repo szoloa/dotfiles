@@ -1,0 +1,422 @@
+[
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/SpineQmlModule_autogen/mocs_compilation.cpp.o -c /home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/mocs_compilation.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/SpineQmlModule_autogen/mocs_compilation.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spineqmlmodule_qmltyperegistrations.cpp.o -c /home/kina/.config/quickshell/Spine/build/spineqmlmodule_qmltyperegistrations.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/build/spineqmlmodule_qmltyperegistrations.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spineqmlmodule_qmltyperegistrations.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/build/.qt/rcc/qrc_qmake_SpineQml.cpp.o -c /home/kina/.config/quickshell/Spine/build/.qt/rcc/qrc_qmake_SpineQml.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/build/.qt/rcc/qrc_qmake_SpineQml.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/build/.qt/rcc/qrc_qmake_SpineQml.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spineqml/spineitem.cpp.o -c /home/kina/.config/quickshell/Spine/spineqml/spineitem.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spineqml/spineitem.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spineqml/spineitem.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/Animation.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/Animation.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/Animation.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/Animation.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/AnimationState.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/AnimationState.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/AnimationState.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/AnimationState.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/AnimationStateData.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/AnimationStateData.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/AnimationStateData.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/AnimationStateData.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/Atlas.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/Atlas.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/Atlas.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/Atlas.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/AtlasAttachmentLoader.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/AtlasAttachmentLoader.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/AtlasAttachmentLoader.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/AtlasAttachmentLoader.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/Attachment.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/Attachment.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/Attachment.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/Attachment.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/AttachmentLoader.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/AttachmentLoader.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/AttachmentLoader.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/AttachmentLoader.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/AttachmentTimeline.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/AttachmentTimeline.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/AttachmentTimeline.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/AttachmentTimeline.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/Bone.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/Bone.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/Bone.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/Bone.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/BoneData.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/BoneData.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/BoneData.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/BoneData.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/BoundingBoxAttachment.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/BoundingBoxAttachment.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/BoundingBoxAttachment.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/BoundingBoxAttachment.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/ClippingAttachment.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/ClippingAttachment.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/ClippingAttachment.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/ClippingAttachment.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/ColorTimeline.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/ColorTimeline.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/ColorTimeline.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/ColorTimeline.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/ConstraintData.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/ConstraintData.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/ConstraintData.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/ConstraintData.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/CurveTimeline.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/CurveTimeline.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/CurveTimeline.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/CurveTimeline.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/DeformTimeline.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/DeformTimeline.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/DeformTimeline.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/DeformTimeline.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/DrawOrderTimeline.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/DrawOrderTimeline.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/DrawOrderTimeline.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/DrawOrderTimeline.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/Event.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/Event.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/Event.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/Event.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/EventData.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/EventData.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/EventData.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/EventData.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/EventTimeline.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/EventTimeline.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/EventTimeline.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/EventTimeline.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/Extension.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/Extension.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/Extension.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/Extension.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/IkConstraint.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/IkConstraint.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/IkConstraint.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/IkConstraint.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/IkConstraintData.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/IkConstraintData.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/IkConstraintData.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/IkConstraintData.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/IkConstraintTimeline.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/IkConstraintTimeline.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/IkConstraintTimeline.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/IkConstraintTimeline.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/Json.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/Json.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/Json.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/Json.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/LinkedMesh.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/LinkedMesh.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/LinkedMesh.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/LinkedMesh.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/MathUtil.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/MathUtil.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/MathUtil.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/MathUtil.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/MeshAttachment.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/MeshAttachment.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/MeshAttachment.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/MeshAttachment.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/PathAttachment.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/PathAttachment.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/PathAttachment.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/PathAttachment.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/PathConstraint.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/PathConstraint.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/PathConstraint.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/PathConstraint.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/PathConstraintData.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/PathConstraintData.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/PathConstraintData.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/PathConstraintData.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/PathConstraintMixTimeline.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/PathConstraintMixTimeline.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/PathConstraintMixTimeline.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/PathConstraintMixTimeline.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/PathConstraintPositionTimeline.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/PathConstraintPositionTimeline.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/PathConstraintPositionTimeline.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/PathConstraintPositionTimeline.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/PathConstraintSpacingTimeline.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/PathConstraintSpacingTimeline.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/PathConstraintSpacingTimeline.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/PathConstraintSpacingTimeline.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/PointAttachment.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/PointAttachment.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/PointAttachment.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/PointAttachment.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/RTTI.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/RTTI.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/RTTI.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/RTTI.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/RegionAttachment.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/RegionAttachment.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/RegionAttachment.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/RegionAttachment.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/RotateTimeline.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/RotateTimeline.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/RotateTimeline.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/RotateTimeline.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/ScaleTimeline.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/ScaleTimeline.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/ScaleTimeline.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/ScaleTimeline.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/ShearTimeline.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/ShearTimeline.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/ShearTimeline.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/ShearTimeline.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/Skeleton.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/Skeleton.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/Skeleton.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/Skeleton.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/SkeletonBinary.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/SkeletonBinary.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/SkeletonBinary.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/SkeletonBinary.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/SkeletonBounds.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/SkeletonBounds.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/SkeletonBounds.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/SkeletonBounds.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/SkeletonClipping.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/SkeletonClipping.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/SkeletonClipping.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/SkeletonClipping.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/SkeletonData.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/SkeletonData.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/SkeletonData.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/SkeletonData.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/SkeletonJson.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/SkeletonJson.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/SkeletonJson.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/SkeletonJson.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/Skin.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/Skin.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/Skin.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/Skin.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/Slot.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/Slot.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/Slot.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/Slot.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/SlotData.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/SlotData.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/SlotData.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/SlotData.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/SpineObject.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/SpineObject.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/SpineObject.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/SpineObject.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/TextureLoader.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/TextureLoader.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/TextureLoader.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/TextureLoader.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/Timeline.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/Timeline.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/Timeline.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/Timeline.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/TransformConstraint.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/TransformConstraint.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/TransformConstraint.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/TransformConstraint.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/TransformConstraintData.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/TransformConstraintData.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/TransformConstraintData.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/TransformConstraintData.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/TransformConstraintTimeline.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/TransformConstraintTimeline.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/TransformConstraintTimeline.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/TransformConstraintTimeline.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/TranslateTimeline.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/TranslateTimeline.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/TranslateTimeline.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/TranslateTimeline.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/Triangulator.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/Triangulator.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/Triangulator.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/Triangulator.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/TwoColorTimeline.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/TwoColorTimeline.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/TwoColorTimeline.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/TwoColorTimeline.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/Updatable.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/Updatable.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/Updatable.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/Updatable.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/VertexAttachment.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/VertexAttachment.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/VertexAttachment.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/VertexAttachment.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/spine/src/spine/VertexEffect.cpp.o -c /home/kina/.config/quickshell/Spine/spine/src/spine/VertexEffect.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/spine/src/spine/VertexEffect.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/spine/src/spine/VertexEffect.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/build/.rcc/qmlcache/SpineQmlModule_qmlcache_loader.cpp.o -c /home/kina/.config/quickshell/Spine/build/.rcc/qmlcache/SpineQmlModule_qmlcache_loader.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/build/.rcc/qmlcache/SpineQmlModule_qmlcache_loader.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/build/.rcc/qmlcache/SpineQmlModule_qmlcache_loader.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/build/.rcc/qmlcache/SpineQmlModule_shell_qml.cpp.o -c /home/kina/.config/quickshell/Spine/build/.rcc/qmlcache/SpineQmlModule_shell_qml.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/build/.rcc/qmlcache/SpineQmlModule_shell_qml.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/build/.rcc/qmlcache/SpineQmlModule_shell_qml.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DSpineQmlModule_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModule_autogen/include -I/home/kina/.config/quickshell/Spine -I/home/kina/.config/quickshell/Spine/spine/include -I/home/kina/.config/quickshell/Spine/spineqml -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModule.dir/build/.qt/rcc/qrc_SpineQmlModule_raw_qml_0.cpp.o -c /home/kina/.config/quickshell/Spine/build/.qt/rcc/qrc_SpineQmlModule_raw_qml_0.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/build/.qt/rcc/qrc_SpineQmlModule_raw_qml_0.cpp",
+  "output": "CMakeFiles/SpineQmlModule.dir/build/.qt/rcc/qrc_SpineQmlModule_raw_qml_0.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_DEPRECATED_WARNINGS -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DSpineQmlModuleplugin_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModuleplugin_autogen/include -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModuleplugin.dir/SpineQmlModuleplugin_autogen/mocs_compilation.cpp.o -c /home/kina/.config/quickshell/Spine/build/SpineQmlModuleplugin_autogen/mocs_compilation.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/build/SpineQmlModuleplugin_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/SpineQmlModuleplugin.dir/SpineQmlModuleplugin_autogen/mocs_compilation.cpp.o"
+},
+{
+  "directory": "/home/kina/.config/quickshell/Spine/build",
+  "command": "/usr/sbin/c++ -DQT_CORE_LIB -DQT_DEPRECATED_WARNINGS -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DSpineQmlModuleplugin_EXPORTS -I/home/kina/.config/quickshell/Spine/build/SpineQmlModuleplugin_autogen/include -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -std=gnu++17 -fPIC -mno-direct-extern-access -o CMakeFiles/SpineQmlModuleplugin.dir/SpineQmlModuleplugin_SpineQmlPlugin.cpp.o -c /home/kina/.config/quickshell/Spine/build/SpineQmlModuleplugin_SpineQmlPlugin.cpp",
+  "file": "/home/kina/.config/quickshell/Spine/build/SpineQmlModuleplugin_SpineQmlPlugin.cpp",
+  "output": "CMakeFiles/SpineQmlModuleplugin.dir/SpineQmlModuleplugin_SpineQmlPlugin.cpp.o"
+}
+]

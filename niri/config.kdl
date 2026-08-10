@@ -99,7 +99,7 @@ layout {
    }
 }
 
-spawn-at-startup "waybar"
+spawn-sh-at-startup "waybar -c ~/.config/waybar/niri/config -s ~/.config/waybar/niri/style.css"
 spawn-at-startup "mako"
 
 spawn-at-startup "fcitx5"
@@ -272,7 +272,7 @@ window-rule {
 
 window-rule {
     match app-id="wps"
-    match app-id="mpv"
+    // match app-id="mpv"
     match app-id="org.quickshell"
     max-width 1980
     max-height 1080
@@ -314,6 +314,7 @@ binds {
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ && pamixer --get-volume > $XDG_RUNTIME_DIR/wob.sock"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- && pamixer --get-volume > $XDG_RUNTIME_DIR/wob.sock"; }
+// ( [ "$(pamixer --get-mute)" = "true" ] && echo 0 > $WOBSOCK ) || pamixer --get-volume > $WOBSOCK
 
     XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && ( [ \"$(pamixer --get-mute)\" = \"true\" ] && echo 0 > $XDG_RUNTIME_DIR/wob.sock ) || pamixer --get-volume > $XDG_RUNTIME_DIR/wob.sock" ; }
 

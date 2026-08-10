@@ -1,0 +1,4 @@
+set(__QT_DEPLOY_TARGET_SpineQmlModule_FILE /home/kina/.config/quickshell/Spine/SpineQml/libSpineQmlModule.so)
+set(__QT_DEPLOY_TARGET_SpineQmlModule_TYPE SHARED_LIBRARY)
+set(__QT_DEPLOY_TARGET_SpineQmlModuleplugin_FILE /home/kina/.config/quickshell/Spine/build/libSpineQmlModuleplugin.so)
+set(__QT_DEPLOY_TARGET_SpineQmlModuleplugin_TYPE MODULE_LIBRARY)

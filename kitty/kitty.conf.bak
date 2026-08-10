@@ -1,4 +1,4 @@
-font_family JetBrainsMono Nerd Font
+font_family JetBrainsMono Nerd Font, Noto Sans CJK SC
 font_size 14.0
 
 cursor_trail 1
@@ -12,6 +12,6 @@ cursor_shape block
 cursor_shape_unfocused block
 
 # BEGIN_KITTY_THEME
-# Neutron
+# Tokyo Night
 include current-theme.conf
 # END_KITTY_THEME
