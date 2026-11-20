@@ -6,7 +6,7 @@
 # Such as: bindsym $mod+w exec "/path/to/dict.sh"
 export SDCV_PAGER="less -R"
 
-word=$(: | wmenu -p "Dict " -f "JetBrains Mono 14")
+word=$(: | wmenu -p "Dict " -f "JetBrains Mono 12")
 rtrn=$?
 [ "$rtrn" -ne 0 ] && exit $rtrn
 
@@ -19,5 +19,5 @@ trans=$(sdcv -n --color --utf8-output $word)
 if [[ trans == "Not found"* ]]; then
   notify-send "not found"
 else
-    kitty --app-id="kitty-float" sdcv --color --utf8-output $word
+    foot --app-id="kitty-float" sdcv --color --utf8-output $word
 fi

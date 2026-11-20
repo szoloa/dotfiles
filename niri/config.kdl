@@ -456,7 +456,7 @@ binds {
 
 
     // ======= scripts =========
-    Alt+W hotkey-overlay-title="Use kd dict" { spawn-sh "~/.config/scripts/dict_local.sh"; }
+    Alt+W hotkey-overlay-title="Use kd dict" { spawn-sh "~/.config/scripts/dict.sh"; }
     // Alt+W { spawn-sh "curl \"127.0.0.1:60828/selection_translate\""; }
     Alt+M hotkey-overlay-title="Open Urls Bookmarks" { spawn-sh "~/.config/scripts/open-bookmarks.sh"; }
     Alt+Shift+O hotkey-overlay-title="Open clipboard Url" { spawn-sh "wl-paste | xargs xdg-open"; }

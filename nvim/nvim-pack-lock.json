@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "R.nvim": {
+      "rev": "d64788f0f8e2097d734468bd04a76d2c46e47137",
+      "src": "https://github.com/R-nvim/R.nvim"
+    },
     "blink.cmp": {
       "rev": "d3874d2a13aa19b095bdd10d37a82a8f0aa7cad3",
       "src": "https://github.com/saghen/blink.cmp"
@@ -11,6 +15,22 @@
     "im-select.nvim": {
       "rev": "963a4e9d528ef8a8d328eeff690593b0146d30e2",
       "src": "https://github.com/keaising/im-select.nvim"
+    },
+    "img-clip.nvim": {
+      "rev": "99848daf801789dbebe2192b475eb887d375002c",
+      "src": "https://github.com/HakonHarnes/img-clip.nvim"
+    },
+    "kitty-scrollback.nvim": {
+      "rev": "4994c85e0f291598d0748488653c83cb698fd281",
+      "src": "https://github.com/mikesmithgh/kitty-scrollback.nvim"
+    },
+    "live-server.nvim": {
+      "rev": "f98bae79fd30274524412f7514549d84391d6bb2",
+      "src": "https://github.com/selimacerbas/live-server.nvim"
+    },
+    "markdown-preview.nvim": {
+      "rev": "faf50b5e233df953a1fd6946d0a8d758bf2e38a1",
+      "src": "https://github.com/selimacerbas/markdown-preview.nvim"
     },
     "mason-lspconfig.nvim": {
       "rev": "51feb0ada33d18f3c5c71ffb46005dbf8b33bef4",
@@ -36,9 +56,17 @@
       "rev": "4916d6592ede8c07973490d9322f187e07dfefac",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
+    "nvim-ufo": {
+      "rev": "ab3eb124062422d276fae49e0dd63b3ad1062cfc",
+      "src": "https://github.com/kevinhwang91/nvim-ufo"
+    },
     "plenary.nvim": {
       "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",
       "src": "https://github.com/nvim-lua/plenary.nvim"
+    },
+    "promise-async": {
+      "rev": "119e8961014c9bfaf1487bf3c2a393d254f337e2",
+      "src": "https://github.com/kevinhwang91/promise-async"
     },
     "quick-c": {
       "rev": "5c1946ae6b986ce216619644727592a317a1c754",

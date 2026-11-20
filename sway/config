@@ -231,6 +231,7 @@ set $menu "[M] boobmark [E] Thunar"
 
 mode $menu {
 	bindsym M exec ~/.config/scripts/open-bookmarks.sh, mode "default"
+	bindsym W exec ~/.config/scripts/dict_local.sh, mode "default"
 	bindsym E exec thunar, mode "default"
 
     bindsym Return mode "default"
@@ -251,8 +252,9 @@ bindsym $mod+m mode $menu
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
     # Special key to take a screenshot with grim
-    bindsym Print exec grim
-    bindsym Menu exec slurp | grim -g - - | swappy -f - 
+    # bindsym Print exec grim
+    bindsym Print exec slurp | grim -g - - | swappy -f - 
+    # bindsym Print exec 
 #
 # Status Bar:
 #
@@ -276,6 +278,7 @@ bar {
 }
 
 for_window [app_id="-float$"] floating enable
+# for_window [app_id="R_x11"] floating enable
 
 exec --no-startup-id mako
 exec --no-startup-id fcitx5

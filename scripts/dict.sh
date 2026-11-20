@@ -5,7 +5,7 @@
 # recommand to bind with a specical key.
 # Such as: bindsym $mod+w exec "/path/to/dict.sh"
 
-word=$(: | wmenu -p "Dict " -f "JetBrains Mono 16")
+word=$(: | wmenu -p "Dict " -f "JetBrains Mono 12")
 rtrn=$?
 [ "$rtrn" -ne 0 ] && exit $rtrn
 
